@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>lumina — 光 — ｜ feeling vol.3 ｜ Creative YOLO</title>
+<meta name="description" content="それぞれの創作者が持つ光が、ひとつになる。写真・映像展シリーズ feeling 第三回「lumina — 光 —」。2026年10月、熊本県立美術館分館にて。">
+
+<!-- OGP（SNSシェア用・画像は後で差し替え） -->
+<meta property="og:title" content="lumina — 光 — ｜ feeling vol.3">
+<meta property="og:description" content="小さな光が寄り集まり、ひとつの大きな光になる。2026年10月、熊本県立美術館分館。">
+<meta property="og:type" content="website">
+<!-- <meta property="og:image" content="差し替え：1200x630のメインビジュアル"> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --void:#0B0D17;
+  --void-2:#12152400;
+  --panel:#141829;
+  --line:rgba(255,232,184,.14);
+  --core:#FFE6AE;          /* ひとつの大きな光 */
+  --glow:#FFD16B;
+  --amber:#F5A623;
+  --rose:#FF7A9C;
+  --cyan:#6FD6E8;
+  --violet:#B48CFF;
+  --ink:#F4F1E8;
+  --mist:#9AA0B8;
+  --mist-dim:#5C6178;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:linear-gradient(180deg,#0A0C1C 0%,#0D1030 18%,#121038 38%,#170F34 58%,#1A0E28 76%,#120A1A 90%,#08090F 100%);
+  background-attachment:scroll;
+  color:var(--ink);
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-weight:400;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* スクロールで昇る光のにじみ（色変化はbodyのグラデが担当） */
+.scene{position:fixed;inset:0;z-index:-2;pointer-events:none}
+
+/* ===== 共通レイアウト ===== */
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 26px}
+.eyebrow{
+  font-family:"Cormorant",serif;
+  font-size:.82rem;
+  letter-spacing:.42em;
+  text-transform:uppercase;
+  color:var(--glow);
+  display:inline-block;
+  margin-bottom:1.4em;
+  padding-left:.42em;
+}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 1.1s ease,transform 1.1s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:120px 26px 90px;
+  overflow:hidden;
+}
+#field{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:680px}
+
+.hero .eyebrow{margin-bottom:2.2em;opacity:0;animation:fade 1.4s ease .3s forwards}
+
+.logotype{
+  font-family:"Cormorant",serif;
+  font-weight:300;
+  font-size:clamp(4.4rem,22vw,11rem);
+  line-height:.92;
+  letter-spacing:.04em;
+  color:var(--core);
+  text-shadow:0 0 38px rgba(255,209,107,.35),0 0 90px rgba(255,209,107,.18);
+  opacity:0;
+  animation:lumen 2.4s ease .5s forwards;
+}
+.kanji{
+  font-family:"Shippori Mincho",serif;
+  font-weight:400;
+  font-size:clamp(.95rem,4.4vw,1.3rem);
+  letter-spacing:1.1em;
+  color:var(--glow);
+  margin:1.4em 0 0 1.1em;
+  opacity:0;
+  animation:fade 1.6s ease 1.4s forwards;
+}
+.kanji::before,.kanji::after{content:"—";color:var(--mist-dim);margin:0 .5em;letter-spacing:0}
+
+.hero-sub{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  font-size:.8rem;letter-spacing:.34em;color:var(--mist);
+  margin-top:1.8em;opacity:0;animation:fade 1.6s ease 1.6s forwards;
+}
+.tagline{
+  font-family:"Shippori Mincho",serif;
+  font-weight:400;
+  font-size:clamp(1rem,3.6vw,1.18rem);
+  letter-spacing:.16em;
+  color:var(--ink);
+  margin-top:2.6em;
+  opacity:0;
+  animation:fade 1.6s ease 1.8s forwards;
+}
+.hero-meta{
+  margin-top:2.4em;
+  font-size:.86rem;
+  letter-spacing:.22em;
+  color:var(--mist);
+  opacity:0;
+  animation:fade 1.6s ease 2.2s forwards;
+}
+.hero-meta b{color:var(--ink);font-weight:500}
+.hero-meta span{color:var(--mist-dim);margin:0 .9em}
+
+.scroll-hint{
+  position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+  z-index:2;font-family:"Cormorant",serif;font-size:.74rem;letter-spacing:.4em;
+  color:var(--mist-dim);text-transform:uppercase;
+  opacity:0;animation:fade 1.6s ease 2.6s forwards;
+}
+.scroll-hint::after{content:"";display:block;width:1px;height:42px;margin:14px auto 0;
+  background:linear-gradient(var(--glow),transparent);animation:drop 2.2s ease-in-out infinite}
+
+@keyframes fade{to{opacity:1}}
+@keyframes lumen{0%{opacity:0;filter:blur(14px);transform:scale(1.04)}100%{opacity:1;filter:blur(0);transform:none}}
+@keyframes drop{0%,100%{transform:scaleY(.4);transform-origin:top;opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+/* ===== セクション共通 ===== */
+section{position:relative;z-index:1}
+.block{padding:120px 0}
+.block h2{
+  font-family:"Shippori Mincho",serif;
+  font-weight:600;
+  font-size:clamp(1.7rem,6.4vw,2.5rem);
+  line-height:1.5;
+  letter-spacing:.06em;
+  margin-bottom:1.1em;
+}
+.block p{font-size:1rem;color:#D9DCE8;max-width:38em}
+.block p + p{margin-top:1.3em}
+.lead{color:var(--ink) !important;font-size:1.06rem !important}
+
+/* コンセプト：中央の光 */
+.concept{text-align:center}
+.concept .wrap{display:flex;flex-direction:column;align-items:center}
+.concept h2{margin-bottom:1.4em}
+.concept p{text-align:center;max-width:30em}
+/* コンセプトの光：ひとつの光のまわりを、小さな色の光がめぐる */
+.cl{position:relative;width:150px;height:150px;margin:0 auto 3.6em}
+.cl-bloom,.cl-core{position:absolute;left:50%;top:50%;border-radius:50%;transform:translate(-50%,-50%)}
+.cl-bloom{
+  width:150px;height:150px;
+  background:radial-gradient(circle,rgba(255,209,107,.22) 0%,rgba(255,170,80,.07) 42%,transparent 70%);
+  animation:cl-breathe 6.5s ease-in-out infinite;
+}
+.cl-core{
+  width:42px;height:42px;
+  background:radial-gradient(circle at 50% 44%,#FFFCF3 0%,#FFEBC2 26%,#FFD16B 56%,rgba(255,200,110,.25) 84%,transparent 100%);
+  box-shadow:0 0 22px 3px rgba(255,224,150,.55),0 0 56px 14px rgba(255,209,107,.30),0 0 120px 44px rgba(255,160,70,.10);
+  animation:cl-pulse 6.5s ease-in-out infinite;
+}
+.cl-orbit{position:absolute;left:50%;top:50%;width:0;height:0;transform:translate(-50%,-50%)}
+.cl-orbit i{position:absolute;left:0;top:0;width:5px;height:5px;border-radius:50%;
+  background:radial-gradient(circle,#fff 0%,var(--c) 48%,transparent 78%);
+  box-shadow:0 0 8px 1px var(--c);transform:translate(-50%,-50%)}
+.cl-o1{animation:cl-spin 16s linear infinite}
+.cl-o1 i{left:58px}
+.cl-o2{animation:cl-spin 23s linear infinite reverse}
+.cl-o2 i{left:-70px}
+.cl-o3{animation:cl-spin 30s linear infinite}
+.cl-o3 i{top:64px}
+@keyframes cl-breathe{0%,100%{opacity:.7;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}}
+@keyframes cl-pulse{0%,100%{transform:translate(-50%,-50%) scale(1);filter:brightness(1)}50%{transform:translate(-50%,-50%) scale(1.05);filter:brightness(1.12)}}
+@keyframes cl-spin{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+/* インフォ */
+.info-grid{border-top:1px solid var(--line)}
+.info-row{
+  display:grid;grid-template-columns:7.5em 1fr;gap:1.5em;
+  padding:1.6em 0;border-bottom:1px solid var(--line);align-items:baseline;
+}
+.info-row dt{
+  font-family:"Cormorant",serif;font-size:.92rem;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--glow);
+}
+.info-row dd{font-size:1.02rem;color:var(--ink)}
+.info-row dd small{display:block;color:var(--mist);font-size:.82rem;letter-spacing:.04em;margin-top:.3em}
+
+/* クリエイター：セクション全体が光の集まる場に */
+.creators{position:relative;overflow:hidden}
+.creators::before{
+  content:"";position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);
+  width:min(960px,130%);height:560px;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse at center,rgba(255,209,107,.12) 0%,rgba(180,140,255,.07) 38%,transparent 70%);
+  filter:blur(18px);animation:cbloom 8s ease-in-out infinite;
+}
+.creators .wrap{position:relative;z-index:2}
+.glow-field{position:absolute;inset:0;z-index:1;pointer-events:none}
+.glow-field .gm{position:absolute;border-radius:50%;
+  background:radial-gradient(circle,#fff 0%,var(--c) 42%,transparent 74%);
+  animation:gtw var(--t,4s) ease-in-out infinite;
+}
+@keyframes cbloom{0%,100%{opacity:.55;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.08)}}
+@keyframes gtw{0%,100%{opacity:.22;transform:scale(.7)}50%{opacity:1;transform:scale(1.18)}}
+
+/* SNS */
+.sns{text-align:center}
+.sns .wrap{display:flex;flex-direction:column;align-items:center}
+.sns h2{margin-bottom:.7em}
+.sns p{text-align:center}
+.cta{
+  display:inline-flex;align-items:center;gap:.6em;margin-top:2.4em;
+  padding:1em 2.2em;border:1px solid var(--glow);border-radius:100px;
+  color:var(--core);text-decoration:none;font-weight:500;letter-spacing:.08em;
+  transition:background .4s ease,color .4s ease,box-shadow .4s ease;
+}
+.cta:hover,.cta:focus-visible{
+  background:var(--glow);color:var(--void);
+  box-shadow:0 0 30px rgba(255,209,107,.4);outline:none;
+}
+.tags{margin-top:2em;font-family:"Cormorant",serif;letter-spacing:.16em;color:var(--mist);font-size:.92rem}
+
+/* フッター */
+footer{padding:64px 0 80px;text-align:center;border-top:1px solid var(--line)}
+.foot-mark{font-family:"Cormorant",serif;font-size:1.5rem;letter-spacing:.3em;color:var(--ink)}
+.foot-sub{margin-top:.8em;font-size:.78rem;letter-spacing:.3em;color:var(--mist-dim)}
+
+a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3px}
+
+@media (max-width:480px){
+  .info-row{grid-template-columns:1fr;gap:.5em}
+  .block{padding:96px 0}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+  .reveal{opacity:1;transform:none}
+  .hero .eyebrow,.logotype,.kanji,.tagline,.hero-meta,.scroll-hint{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<div class="scene" id="scene" aria-hidden="true"></div>
+<canvas id="field" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">feeling vol.3 &nbsp;/&nbsp; 2026</span>
+    <h1 class="logotype">lumina</h1>
+    <div class="kanji">光</div>
+    <p class="hero-sub">第3回 YOLO写真映像展</p>
+    <p class="tagline">私たちは何を感じ、何を撮るのか。</p>
+    <p class="hero-meta"><b>2026.10</b><span>｜</span>熊本県立美術館分館</p>
+  </div>
+  <div class="scroll-hint">scroll</div>
+</header>
+
+<main>
+
+  <section class="block concept">
+    <div class="wrap">
+      <div class="cl reveal" aria-hidden="true">
+        <span class="cl-bloom"></span>
+        <span class="cl-core"></span>
+        <span class="cl-orbit cl-o1"><i style="--c:#6FD6E8"></i></span>
+        <span class="cl-orbit cl-o2"><i style="--c:#FF7A9C"></i></span>
+        <span class="cl-orbit cl-o3"><i style="--c:#B48CFF"></i></span>
+      </div>
+      <span class="eyebrow reveal">concept</span>
+      <h2 class="reveal">それぞれの、光。</h2>
+      <p class="lead reveal">「lumina」は、光をテーマにした写真展ではありません。</p>
+      <p class="reveal">創作する一人ひとりが内に持つ、その人だけの光のこと。ジャンルも、表現も、見つめる先も違う。それでも同じ場所に集まったとき、小さな光は寄り集まり、ひとつの大きな光になる。</p>
+      <p class="reveal">——これは、その瞬間を見にくる展示です。</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <span class="eyebrow reveal">the series</span>
+      <h2 class="reveal">feeling という問い。</h2>
+      <p class="reveal">feeling は、Creative YOLO が続けてきた写真・映像展シリーズに通底するテーマ。「私たちは何を感じ、何を撮るのか」。</p>
+      <p class="reveal">その問いに、毎年ちがう光で答えていく。lumina は、その三度目。前回「feeling」から、表現はさらに広がります。</p>
+    </div>
+  </section>
+
+  <!-- ④ EXHIBITION（draft：トーン確認用の仮コピー） -->
+  <section class="block">
+    <div class="wrap">
+      <span class="eyebrow reveal">exhibition</span>
+      <h2 class="reveal">写真と映像が、集まる。</h2>
+      <p class="reveal">熊本県立美術館 分館の空間に、創作者それぞれの「光」が並びます。写真、映像、そしてジャンルにとらわれない表現も。</p>
+      <p class="reveal">一枚ずつは小さな光でも、会場全体でひとつの大きな光景になる。</p>
+    </div>
+  </section>
+
+  <!-- ⑤ JOIN（CREATORSより先に配置：募集導線） -->
+  <section class="block">
+    <div class="wrap">
+      <span class="eyebrow reveal">join</span>
+      <h2 class="reveal">あなたの光も、この場所へ。</h2>
+      <p class="reveal">写真でも、映像でも、まだ言葉になっていない表現でも。</p>
+      <p class="reveal">lumina は、創作者一人ひとりが内に持つ光を集める展示です。</p>
+      <p class="reveal">出展を希望する方は、Instagram または応募フォームよりご確認ください。</p>
+      <!-- ↓ 応募フォーム or 問い合わせ先のURLに差し替えてください -->
+      <a class="cta reveal" href="#" rel="noopener">出展について見る →</a>
+    </div>
+  </section>
+
+  <!-- ⑥ CREATORS（人数を出さず「集まりはじめた」見せ方） -->
+  <section class="block creators">
+    <div class="glow-field" id="glowField" aria-hidden="true"></div>
+    <div class="wrap">
+      <span class="eyebrow reveal">creators</span>
+      <h2 class="reveal">集まりはじめた、光。</h2>
+      <p class="reveal">熊本を拠点に活動する創作者たちが、それぞれの視点で「光」を持ち寄ります。</p>
+      <p class="reveal">出展者は、順次公開予定です。</p>
+    </div>
+  </section>
+
+  <!-- ⑦ SMALL EXPERIENCE（draft：仕掛けは“ちょい出し”に留める） -->
+  <section class="block">
+    <div class="wrap">
+      <span class="eyebrow reveal">experience</span>
+      <h2 class="reveal">あなたも、光のひとつになる。</h2>
+      <p class="reveal">会場には、来場者が参加できる小さな仕掛けを用意しています。スマートフォンからの参加で、会場の光がすこしずつ灯っていく——。</p>
+      <p class="reveal">くわしくは、会期が近づいたら公開します。</p>
+    </div>
+  </section>
+
+  <!-- ⑧ INFORMATION -->
+  <section class="block">
+    <div class="wrap">
+      <span class="eyebrow reveal">information</span>
+      <dl class="info-grid reveal">
+        <div class="info-row">
+          <dt>Date</dt>
+          <dd>2026年10月（5〜7日間）<small>※会期確定後に掲載します</small></dd>
+        </div>
+        <div class="info-row">
+          <dt>Venue</dt>
+          <dd>熊本県立美術館 分館<small>※住所・アクセスは確認のうえ掲載</small></dd>
+        </div>
+        <div class="info-row">
+          <dt>Entry</dt>
+          <dd>入場料 未定<small>※決定後に掲載します</small></dd>
+        </div>
+        <div class="info-row">
+          <dt>Host</dt>
+          <dd>Creative YOLO<small>夢を追うすべての“今”をカタチに。</small></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ⑨ SNS -->
+  <section class="block sns">
+    <div class="wrap">
+      <span class="eyebrow reveal">stay in touch</span>
+      <h2 class="reveal">最新情報は Instagram で。</h2>
+      <p class="reveal">会期・出展者・チケット情報は、Instagram から先にお届けします。</p>
+      <!-- ↓ アカウントのURLは正しいものに差し替えてください -->
+      <a class="cta reveal" href="https://www.instagram.com/" target="_blank" rel="noopener">@creative_yolo をフォロー →</a>
+      <p class="tags reveal">#lumina2026 &nbsp; #feeling &nbsp; #CreativeYOLO</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-mark">YOLO</div>
+  <div class="foot-sub">CREATIVE YOLO ／ KUMAMOTO</div>
+</footer>
+
+<script>
+(function(){
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ===== スクロールで各要素をふわっと表示 ===== */
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach((e)=>{
+      if(e.isIntersecting){
+        const el=e.target;
+        setTimeout(()=>el.classList.add('in'), reduce?0:(parseInt(el.dataset.d||0)));
+        io.unobserve(el);
+      }
+    });
+  },{threshold:.18});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{
+    el.dataset.d = (i%4)*90;
+    io.observe(el);
+  });
+
+  /* ===== クリエイター：セクション全体に散る光 ===== */
+  const cols=['#F5A623','#FF7A9C','#6FD6E8','#B48CFF','#FFD16B'];
+  const gf=document.getElementById('glowField');
+  if(gf){
+    for(let i=0;i<64;i++){
+      const m=document.createElement('span');m.className='gm';
+      const sz=2+Math.random()*7, c=cols[i%cols.length];
+      m.style.width=sz+'px';m.style.height=sz+'px';
+      m.style.left=(Math.random()*100)+'%';
+      m.style.top=(Math.random()*100)+'%';
+      m.style.setProperty('--c',c);
+      m.style.setProperty('--t',(3+Math.random()*4).toFixed(2)+'s');
+      m.style.boxShadow='0 0 '+(sz*1.8).toFixed(0)+'px '+c;
+      m.style.animationDelay=(Math.random()*4).toFixed(2)+'s';
+      gf.appendChild(m);
+    }
+  }
+
+  /* ===== 全体：スクロールで昇っていく光のにじみ ===== */
+  const scene=document.getElementById('scene');
+  function paintGlow(){
+    const max=document.documentElement.scrollHeight-window.innerHeight;
+    const prog=max>0?Math.min(1,Math.max(0,window.scrollY/max)):0;
+    const y=(86-prog*66).toFixed(1);
+    const warm=(0.08+prog*0.09).toFixed(3);
+    scene.style.background=
+      'radial-gradient(90% 62% at 50% '+y+'%, rgba(255,205,120,'+warm+') 0%, rgba(160,120,255,0.07) 44%, transparent 78%)';
+  }
+  if(scene && !reduce){
+    paintGlow();
+    let ticking=false;
+    window.addEventListener('scroll',()=>{
+      if(!ticking){requestAnimationFrame(()=>{paintGlow();ticking=false;});ticking=true;}
+    },{passive:true});
+    window.addEventListener('resize',paintGlow,{passive:true});
+  }
+
+  /* ===== 全画面の光：インタラクティブCanvasシステム ===== */
+  const canvas=document.getElementById('field');
+  const ctx=canvas.getContext('2d');
+  let W,H,DPR,cx,cy,particles=[],start=performance.now();
+  let focus={x:0,y:0}, target={x:0,y:0};
+
+  // マウス/タッチ追従
+  let mouse={x:0,y:0}, lastMouseMove=Date.now();
+  if(!reduce){
+    window.addEventListener('mousemove',e=>{
+      mouse.x=e.clientX; mouse.y=e.clientY; lastMouseMove=Date.now();
+    },{passive:true});
+    window.addEventListener('touchmove',e=>{
+      mouse.x=e.touches[0].clientX; mouse.y=e.touches[0].clientY;
+      lastMouseMove=Date.now();
+    },{passive:true});
+  }
+
+  // スクロール速度
+  let scrollVel=0, lastScrollY=window.scrollY;
+  if(!reduce){
+    window.addEventListener('scroll',()=>{
+      scrollVel=Math.min(4,Math.abs(window.scrollY-lastScrollY)*0.1);
+      lastScrollY=window.scrollY;
+    },{passive:true});
+  }
+
+  // クリック/タップ爆発
+  let flashT=-999999;
+  if(!reduce){
+    canvas.addEventListener('pointerdown',e=>{
+      const bx=e.clientX, by=e.clientY;
+      particles.forEach(p=>{
+        const dx=(focus.x+p.chx)-bx;
+        const dy=(focus.y+p.chy)-by;
+        const d=Math.hypot(dx,dy)||1;
+        const force=Math.max(0,1-d/320)*55;
+        p.burstX=(dx/d)*force; p.burstY=(dy/d)*force;
+        p.burstT=performance.now();
+      });
+      flashT=performance.now();
+    },{passive:true});
+  }
+
+  // セクション切替フラッシュ
+  let flashB=0;
+
+  // セクション別カラーウェイト [amber,rose,cyan,violet,gold]
+  const CFG=[
+    {a:[0.50,0.45],m:'gather', s:0.95,b:0.85,c:0.38, cw:[1.0,0.6,0.5,0.7,1.2]},
+    {a:[0.33,0.50],m:'scatter',s:0.80,b:0.70,c:0.14, cw:[0.3,0.5,1.4,0.8,0.4]},
+    {a:[0.50,0.47],m:'band',   s:0.75,b:0.68,c:0.12, cw:[0.5,0.4,0.6,1.4,0.5]},
+    {a:[0.50,0.50],m:'grid',   s:0.80,b:0.78,c:0.10, cw:[0.6,1.0,0.7,0.8,0.6]},
+    {a:[0.62,0.50],m:'gather', s:0.88,b:0.82,c:0.26, cw:[1.4,0.5,0.4,0.5,1.0]},
+    {a:[0.50,0.50],m:'gather', s:1.05,b:1.00,c:0.46, cw:[1.2,1.0,0.8,1.2,1.4]},
+    {a:[0.50,0.48],m:'ring',   s:0.85,b:0.82,c:0.18, cw:[0.5,0.9,0.7,1.6,0.5]},
+    {a:[0.37,0.52],m:'recede', s:0.55,b:0.46,c:0.07, cw:[0.5,0.4,0.5,0.5,0.6]},
+    {a:[0.50,0.46],m:'scatter',s:0.85,b:0.78,c:0.16, cw:[0.8,1.2,1.0,0.6,0.8]}
+  ];
+
+  const BASE_COLORS=[[245,166,35],[255,122,156],[111,214,232],[180,140,255],[255,209,107]];
+  let curCW=[1,1,1,1,1], tCW=[1,1,1,1,1];
+
+  function formation(m,p,S,i,n){
+    switch(m){
+      case 'scatter':{const r=(0.30+p.u*0.70)*S*0.46;return [Math.cos(p.a)*r,Math.sin(p.a)*r*0.78];}
+      case 'ring':{const r=S*0.24*(0.9+0.12*p.u);return [Math.cos(p.a)*r,Math.sin(p.a)*r];}
+      case 'band':{return [(p.u-0.5)*S*1.25,Math.sin(p.a)*S*0.05];}
+      case 'grid':{
+        const gc=Math.max(1,Math.round(Math.sqrt(n)));
+        const gr=Math.ceil(n/gc);
+        const gx=i%gc, gy=Math.floor(i/gc);
+        return [(gx-(gc-1)/2)*(S*0.66/gc),(gy-(gr-1)/2)*(S*0.40/gr)];
+      }
+      case 'recede':{const r=p.u*S*0.085;return [Math.cos(p.a)*r,Math.sin(p.a)*r];}
+      default:{const r=p.u*S*0.13;return [Math.cos(p.a)*r,Math.sin(p.a)*r];}
+    }
+  }
+
+  function resize(){
+    DPR=Math.min(window.devicePixelRatio||1,2);
+    W=canvas.clientWidth; H=canvas.clientHeight;
+    canvas.width=W*DPR; canvas.height=H*DPR;
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    cx=W/2; cy=H/2;
+    mouse.x=cx; mouse.y=cy;
+    if(!focus.x){focus.x=cx; focus.y=cy;}
+    if(!target.x){target.x=cx; target.y=cy;}
+  }
+
+  function makeParticles(){
+    particles=[];
+    const n=W<520?52:90;
+    for(let i=0;i<n;i++){
+      const ang=Math.random()*Math.PI*2;
+      const rad=Math.min(W,H)*(0.5+Math.random()*0.65);
+      particles.push({
+        ox:cx+Math.cos(ang)*rad, oy:cy+Math.sin(ang)*rad,
+        a:Math.random()*Math.PI*2, u:Math.random(),
+        ph:Math.random()*Math.PI*2, sp:0.3+Math.random()*0.5,
+        drift:6+Math.random()*8,
+        baseR:1.0+Math.random()*2.0,
+        ci:i%BASE_COLORS.length,
+        delay:Math.random()*0.5,
+        chx:0,chy:0, thx:0,thy:0,
+        burstX:0,burstY:0,burstT:-999999
+      });
+    }
+  }
+
+  const ease=t=>1-Math.pow(1-t,3);
+
+  let curIdx=-1;
+  const cur={s:0.95,b:0.85,c:0.38}, tcur={s:0.95,b:0.85,c:0.38};
+
+  function setSection(idx){
+    if(idx===curIdx) return;
+    curIdx=idx;
+    flashB=0.55;
+    const cfg=CFG[idx%CFG.length];
+    target.x=cfg.a[0]*W; target.y=cfg.a[1]*H;
+    tcur.s=cfg.s; tcur.b=cfg.b; tcur.c=cfg.c;
+    tCW=cfg.cw.slice();
+    const S=Math.min(W,H), n=particles.length;
+    particles.forEach((p,i)=>{const o=formation(cfg.m,p,S,i,n);p.thx=o[0];p.thy=o[1];});
+  }
+
+  const sections=[...document.querySelectorAll('header.hero, main .block')];
+  function pickAnchor(){
+    const midY=window.innerHeight*0.5;
+    let idx=0;
+    for(let i=0;i<sections.length;i++){
+      const r=sections[i].getBoundingClientRect();
+      if(r.top<=midY && r.bottom>midY){idx=i;break;}
+    }
+    setSection(idx);
+  }
+  window.addEventListener('scroll',pickAnchor,{passive:true});
+
+  function draw(now){
+    const t=(now-start)/1000;
+    ctx.clearRect(0,0,W,H);
+
+    // スクロール速度の減衰
+    scrollVel*=0.88;
+
+    // カーソル追従：セクションアンカーにマウスオフセットをブレンド
+    const blendX=target.x+(mouse.x-target.x)*0.18;
+    const blendY=target.y+(mouse.y-target.y)*0.12;
+    focus.x+=(blendX-focus.x)*0.06;
+    focus.y+=(blendY-focus.y)*0.06;
+
+    // パラメータ補間
+    cur.s+=(tcur.s-cur.s)*0.06;
+    cur.b+=(tcur.b-cur.b)*0.06;
+    cur.c+=(tcur.c-cur.c)*0.06;
+    for(let i=0;i<5;i++) curCW[i]+=(tCW[i]-curCW[i])*0.04;
+    flashB*=0.82;
+
+    // アイドル呼吸（5秒静止でゆらぎ）
+    const idleSec=(Date.now()-lastMouseMove)/1000;
+    const breathe=idleSec>5?1+0.30*Math.sin(t*0.4):1;
+
+    const conv=Math.min(1,Math.max(0,(t-0.5)/2.8));
+    const coreA=ease(conv);
+    const effectiveB=cur.b+flashB;
+
+    // 中心光
+    const ca=cur.c*coreA;
+    if(ca>0.004){
+      const cr=110;
+      const g=ctx.createRadialGradient(focus.x,focus.y,0,focus.x,focus.y,cr);
+      g.addColorStop(0,`rgba(255,232,178,${ca})`);
+      g.addColorStop(.45,`rgba(255,209,107,${ca*0.5})`);
+      g.addColorStop(1,'rgba(255,209,107,0)');
+      ctx.fillStyle=g;ctx.beginPath();ctx.arc(focus.x,focus.y,cr,0,Math.PI*2);ctx.fill();
+    }
+
+    // クリックフラッシュ（中心の白いグロー）
+    const flashAge=(now-flashT)/400;
+    if(flashAge<1){
+      const fa=(1-ease(flashAge))*0.75;
+      const fg=ctx.createRadialGradient(focus.x,focus.y,0,focus.x,focus.y,180);
+      fg.addColorStop(0,`rgba(255,248,230,${fa})`);
+      fg.addColorStop(.3,`rgba(255,220,130,${fa*0.5})`);
+      fg.addColorStop(1,'rgba(255,180,80,0)');
+      ctx.fillStyle=fg;ctx.beginPath();ctx.arc(focus.x,focus.y,180,0,Math.PI*2);ctx.fill();
+    }
+
+    ctx.globalCompositeOperation='lighter';
+    particles.forEach(p=>{
+      p.chx+=(p.thx-p.chx)*0.05;
+      p.chy+=(p.thy-p.chy)*0.05;
+      const pr=ease(Math.min(1,Math.max(0,(conv-p.delay)/((1-p.delay)||1))));
+
+      // カーソル引力（280px以内で効く）
+      const mdx=mouse.x-(focus.x+p.chx);
+      const mdy=mouse.y-(focus.y+p.chy);
+      const mdist=Math.hypot(mdx,mdy);
+      const pull=Math.max(0,1-mdist/280)*0.18*pr;
+
+      const homeX=focus.x+p.chx+mdx*pull;
+      const homeY=focus.y+p.chy+mdy*pull;
+      const bx=p.ox+(homeX-p.ox)*pr;
+      const by=p.oy+(homeY-p.oy)*pr;
+
+      // スクロール速度 + アイドル呼吸で揺れ幅変化
+      const dynDrift=p.drift*(1+scrollVel*1.4)*breathe;
+      const baseX=bx+Math.cos(t*p.sp+p.ph)*dynDrift*pr;
+      const baseY=by+Math.sin(t*p.sp*0.9+p.ph)*dynDrift*pr;
+
+      // 爆発オフセット（300msで収束）
+      const burstAge=(now-p.burstT)/300;
+      const burstE=burstAge<1?ease(1-burstAge):0;
+      const x=baseX+p.burstX*burstE;
+      const y=baseY+p.burstY*burstE;
+
+      const tw=0.55+0.45*Math.sin(t*1.5+p.ph);
+      const r=p.baseR*cur.s*(1+tw*0.3);
+
+      // セクション別カラーウェイト適用
+      const w=curCW[p.ci];
+      const [R,G,B]=BASE_COLORS[p.ci];
+      const alpha=Math.min(1, 0.9*tw*effectiveB*w);
+      const grd=ctx.createRadialGradient(x,y,0,x,y,r*6);
+      grd.addColorStop(0,`rgba(${R},${G},${B},${alpha})`);
+      grd.addColorStop(1,`rgba(${R},${G},${B},0)`);
+      ctx.fillStyle=grd;ctx.beginPath();ctx.arc(x,y,r*6,0,Math.PI*2);ctx.fill();
+    });
+    ctx.globalCompositeOperation='source-over';
+    requestAnimationFrame(draw);
+  }
+
+  function init(){
+    resize(); makeParticles(); pickAnchor();
+    particles.forEach(p=>{p.chx=p.thx;p.chy=p.thy;});
+    cur.s=tcur.s; cur.b=tcur.b; cur.c=tcur.c;
+    curCW=tCW.slice();
+    if(reduce){
+      start=performance.now()-9000;
+      draw(performance.now());
+    }else{
+      start=performance.now();
+      requestAnimationFrame(draw);
+    }
+  }
+  window.addEventListener('resize',()=>{resize();makeParticles();curIdx=-1;pickAnchor();particles.forEach(p=>{p.chx=p.thx;p.chy=p.thy;});});
+  init();
+})();
+</script>
+</body>
+</html>
