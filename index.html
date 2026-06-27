@@ -204,21 +204,20 @@ section{position:relative;z-index:1}
 .info-row dd{font-size:1.02rem;color:var(--ink)}
 .info-row dd small{display:block;color:var(--mist);font-size:.82rem;letter-spacing:.04em;margin-top:.3em}
 
-/* クリエイター：セクション全体が光の集まる場に */
-.creators{position:relative;overflow:hidden}
-.creators::before{
+/* ===== 全セクション共通：creatorsと同じ光の背景 ===== */
+.block::before{
   content:"";position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);
   width:min(960px,130%);height:560px;z-index:0;pointer-events:none;
   background:radial-gradient(ellipse at center,rgba(255,209,107,.12) 0%,rgba(180,140,255,.07) 38%,transparent 70%);
   filter:blur(18px);animation:cbloom 8s ease-in-out infinite;
 }
-.creators .wrap{position:relative;z-index:2}
+
+/* クリエイターの浮遊ドット（既存） */
 .glow-field{position:absolute;inset:0;z-index:1;pointer-events:none}
 .glow-field .gm{position:absolute;border-radius:50%;
   background:radial-gradient(circle,#fff 0%,var(--c) 42%,transparent 74%);
   animation:gtw var(--t,4s) ease-in-out infinite;
 }
-@keyframes cbloom{0%,100%{opacity:.55;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.08)}}
 @keyframes gtw{0%,100%{opacity:.22;transform:scale(.7)}50%{opacity:1;transform:scale(1.18)}}
 
 /* SNS */
@@ -317,11 +316,10 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
     <div class="wrap">
       <span class="eyebrow reveal">join</span>
       <h2 class="reveal">あなたの光も、この場所へ。</h2>
-      <p class="reveal">写真でも、映像でも、まだ言葉になっていない表現でも。</p>
-      <p class="reveal">lumina は、創作者一人ひとりが内に持つ光を集める展示です。</p>
-      <p class="reveal">出展を希望する方は、Instagram または応募フォームよりご確認ください。</p>
-      <!-- ↓ 応募フォーム or 問い合わせ先のURLに差し替えてください -->
-      <a class="cta reveal" href="#" rel="noopener">出展について見る →</a>
+      <p class="reveal">ポートレート、風景、スナップ、映像——ジャンルは問いません。</p>
+      <p class="reveal">lumina は、創作する一人ひとりが内に持つ光を集める展示です。出展希望の方は、応募フォームからご応募ください。</p>
+      <p class="reveal" style="font-size:.88rem;color:var(--mist);letter-spacing:.04em;">※ 本展示はCreative YOLO Discordコミュニティへの参加が出展条件となります。</p>
+      <a class="cta reveal" href="https://docs.google.com/forms/d/1H2IOkfsy-6pgAxtzKYnceNHVywKlholfBpN9XkINYSA/viewform" target="_blank" rel="noopener">出展に応募する →</a>
     </div>
   </section>
 
@@ -353,15 +351,15 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
       <dl class="info-grid reveal">
         <div class="info-row">
           <dt>Date</dt>
-          <dd>2026年10月（5〜7日間）<small>※会期確定後に掲載します</small></dd>
+          <dd>2026年10月13日(火)〜10月18日(日)</dd>
         </div>
         <div class="info-row">
           <dt>Venue</dt>
-          <dd>熊本県立美術館 分館<small>※住所・アクセスは確認のうえ掲載</small></dd>
+          <dd>熊本県立美術館 分館</dd>
         </div>
         <div class="info-row">
           <dt>Entry</dt>
-          <dd>入場料 未定<small>※決定後に掲載します</small></dd>
+          <dd>入場料 無料</dd>
         </div>
         <div class="info-row">
           <dt>Host</dt>
@@ -376,10 +374,9 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
     <div class="wrap">
       <span class="eyebrow reveal">stay in touch</span>
       <h2 class="reveal">最新情報は Instagram で。</h2>
-      <p class="reveal">会期・出展者・チケット情報は、Instagram から先にお届けします。</p>
       <!-- ↓ アカウントのURLは正しいものに差し替えてください -->
       <a class="cta reveal" href="https://www.instagram.com/" target="_blank" rel="noopener">@creative_yolo をフォロー →</a>
-      <p class="tags reveal">#lumina2026 &nbsp; #feeling &nbsp; #CreativeYOLO</p>
+      <p class="tags reveal">#lumina2026 &nbsp; #yolo写真映像展lumina &nbsp; #クリエイティブYOLO</p>
     </div>
   </section>
 
@@ -409,10 +406,13 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
     io.observe(el);
   });
 
-  /* ===== クリエイター：セクション全体に散る光 ===== */
+  /* ===== 全セクション：浮かぶ光の点を注入 ===== */
   const cols=['#F5A623','#FF7A9C','#6FD6E8','#B48CFF','#FFD16B'];
-  const gf=document.getElementById('glowField');
-  if(gf){
+  document.querySelectorAll('main .block').forEach(sec=>{
+    if(sec.querySelector('.glow-field')) return; // 既存のものはスキップ
+    const gf=document.createElement('div');
+    gf.className='glow-field';
+    gf.setAttribute('aria-hidden','true');
     for(let i=0;i<64;i++){
       const m=document.createElement('span');m.className='gm';
       const sz=2+Math.random()*7, c=cols[i%cols.length];
@@ -425,7 +425,8 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
       m.style.animationDelay=(Math.random()*4).toFixed(2)+'s';
       gf.appendChild(m);
     }
-  }
+    sec.insertBefore(gf, sec.firstChild);
+  });
 
   /* ===== 全体：スクロールで昇っていく光のにじみ ===== */
   const scene=document.getElementById('scene');
