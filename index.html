@@ -257,27 +257,17 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
 }
 
 /* ===== 過去の開催写真グリッド ===== */
-.past-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:6px;
-  padding:48px 0 0;
-  max-width:1000px;
-  margin:0 auto;
-}
-.past-item{margin:0}
-.past-item--wide{grid-column:span 2}
-.past-img{
-  width:100%;
-  aspect-ratio:3/4;
+/* ===== 散在する過去写真 ===== */
+.bg-photo{
+  position:absolute;
+  pointer-events:none;
+  z-index:0;
+  opacity:.07;
   object-fit:cover;
-  display:block;
+  mix-blend-mode:luminosity;
 }
-.past-item--wide .past-img{aspect-ratio:3/2}
 @media(max-width:600px){
-  .past-grid{grid-template-columns:repeat(2,1fr);gap:4px;padding-top:32px}
-  .past-item--wide{grid-column:span 2}
-  .past-item--wide .past-img{aspect-ratio:16/9}
+  .bg-photo{opacity:.05}
 }
 
 /* ===== LUMINA CHARACTER ===== */
@@ -386,6 +376,8 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
 <main>
 
   <section class="block concept">
+    <img src="assets/past-01.jpg" alt="" class="bg-photo" aria-hidden="true"
+         style="width:55%;right:-8%;top:10%;transform:rotate(3deg)">
     <div class="wrap">
       <div class="cl reveal" aria-hidden="true">
         <span class="cl-bloom"></span>
@@ -403,29 +395,15 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
   </section>
 
   <section class="block">
+    <img src="assets/past-02.jpg" alt="" class="bg-photo" aria-hidden="true"
+         style="width:42%;left:-6%;bottom:5%;transform:rotate(-4deg)">
+    <img src="assets/past-05.jpg" alt="" class="bg-photo" aria-hidden="true"
+         style="width:38%;right:2%;top:8%;transform:rotate(2deg)">
     <div class="wrap">
       <span class="eyebrow reveal">the series</span>
       <h2 class="reveal">feeling という問い。</h2>
       <p class="reveal">feeling は、Creative YOLO が続けてきた写真・映像展シリーズに通底するテーマ。「私たちは何を感じ、何を撮るのか」。</p>
       <p class="reveal">その問いに、毎年ちがう光で答えていく。lumina は、その三度目。前回「feeling」から、表現はさらに広がります。</p>
-    </div>
-    <!-- 過去の開催写真 -->
-    <div class="past-grid reveal">
-      <figure class="past-item">
-        <img src="assets/past-01.jpg" alt="会場内装" class="past-img">
-      </figure>
-      <figure class="past-item">
-        <img src="assets/past-02.jpg" alt="撮影ブース" class="past-img">
-      </figure>
-      <figure class="past-item">
-        <img src="assets/past-03.jpg" alt="展示を見る人々" class="past-img">
-      </figure>
-      <figure class="past-item">
-        <img src="assets/past-04.jpg" alt="集合写真" class="past-img">
-      </figure>
-      <figure class="past-item past-item--wide">
-        <img src="assets/past-05.jpg" alt="映像展の様子" class="past-img">
-      </figure>
     </div>
   </section>
 
@@ -453,6 +431,8 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
 
   <!-- ⑥ CREATORS（人数を出さず「集まりはじめた」見せ方） -->
   <section class="block creators">
+    <img src="assets/past-03.jpg" alt="" class="bg-photo" aria-hidden="true"
+         style="width:50%;right:-4%;top:15%;transform:rotate(-2deg)">
     <div class="glow-field" id="glowField" aria-hidden="true"></div>
     <div class="wrap">
       <span class="eyebrow reveal">creators</span>
@@ -462,10 +442,12 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
     </div>
   </section>
 
-  <!-- ⑦ SMALL EXPERIENCE（draft：仕掛けは“ちょい出し”に留める） -->
-  <section class="block">
-    <div class="wrap">
-      <span class="eyebrow reveal">experience</span>
+  <!-- ⑦ SMALL EXPERIENCE（draft：仕掛けは”ちょい出し”に留める） -->
+  <section class=”block”>
+    <img src=”assets/past-04.jpg” alt=”” class=”bg-photo” aria-hidden=”true”
+         style=”width:48%;left:-5%;top:20%;transform:rotate(3deg)”>
+    <div class=”wrap”>
+      <span class=”eyebrow reveal”>experience</span>
       <h2 class="reveal">あなたも、光のひとつになる。</h2>
       <p class="reveal">会場には、来場者が参加できる小さな仕掛けを用意しています。スマートフォンからの参加で、会場の光がすこしずつ灯っていく——。</p>
       <p class="reveal">くわしくは、会期が近づいたら公開します。</p>
