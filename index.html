@@ -244,6 +244,18 @@ footer{padding:64px 0 80px;text-align:center;border-top:1px solid var(--line)}
 
 a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3px}
 
+/* ===== HERO シルエット ===== */
+.lumina-shadow{
+  position:absolute;
+  right:6vw;
+  bottom:0;
+  width:clamp(160px,22vw,300px);
+  opacity:.72;
+  pointer-events:none;
+  animation:lumina-float 6s ease-in-out infinite;
+  z-index:1;
+}
+
 /* ===== LUMINA CHARACTER ===== */
 .lumina-chara{overflow:visible}
 /* .wrap は max-width:760px で中央揃え。キャラはその右側・テキストの横に配置 */
@@ -336,6 +348,7 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
     <p class="tagline">私たちは何を感じ、何を撮るのか。</p>
     <p class="hero-meta"><b>2026.10</b><span>｜</span>熊本県立美術館分館</p>
   </div>
+  <img src="assets/lumina-shadow.png" alt="" class="lumina-shadow" aria-hidden="true">
   <div class="scroll-hint">scroll</div>
 </header>
 
