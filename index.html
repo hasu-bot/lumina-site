@@ -260,37 +260,24 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
 .past-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:8px;
+  gap:6px;
   padding:48px 0 0;
-  max-width:960px;
+  max-width:1000px;
   margin:0 auto;
 }
 .past-item{margin:0}
+.past-item--wide{grid-column:span 2}
 .past-img{
   width:100%;
   aspect-ratio:3/4;
   object-fit:cover;
   display:block;
 }
-.past-ph{
-  background:linear-gradient(135deg,rgba(111,214,232,.08) 0%,rgba(180,140,255,.12) 50%,rgba(255,209,107,.06) 100%);
-  border:1px solid rgba(255,255,255,.06);
-  position:relative;
-}
-.past-ph::after{
-  content:"photo";
-  position:absolute;inset:0;
-  display:flex;align-items:center;justify-content:center;
-  font-family:"Cormorant",serif;font-size:.78rem;letter-spacing:.28em;
-  color:rgba(255,255,255,.18);text-transform:uppercase;
-}
-.past-item figcaption{
-  margin-top:.7em;
-  font-family:"Cormorant",serif;font-size:.78rem;letter-spacing:.22em;
-  color:var(--mist-dim);text-transform:uppercase;
-}
+.past-item--wide .past-img{aspect-ratio:3/2}
 @media(max-width:600px){
-  .past-grid{grid-template-columns:repeat(2,1fr);gap:6px;padding-top:36px}
+  .past-grid{grid-template-columns:repeat(2,1fr);gap:4px;padding-top:32px}
+  .past-item--wide{grid-column:span 2}
+  .past-item--wide .past-img{aspect-ratio:16/9}
 }
 
 /* ===== LUMINA CHARACTER ===== */
@@ -422,23 +409,22 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
       <p class="reveal">feeling は、Creative YOLO が続けてきた写真・映像展シリーズに通底するテーマ。「私たちは何を感じ、何を撮るのか」。</p>
       <p class="reveal">その問いに、毎年ちがう光で答えていく。lumina は、その三度目。前回「feeling」から、表現はさらに広がります。</p>
     </div>
-    <!-- 過去の開催写真（仮） -->
+    <!-- 過去の開催写真 -->
     <div class="past-grid reveal">
       <figure class="past-item">
-        <div class="past-img past-ph"></div>
-        <figcaption>feeling vol.1 — 2024</figcaption>
+        <img src="assets/past-01.jpg" alt="会場内装" class="past-img">
       </figure>
       <figure class="past-item">
-        <div class="past-img past-ph"></div>
-        <figcaption>feeling vol.2 — 2025</figcaption>
+        <img src="assets/past-02.jpg" alt="撮影ブース" class="past-img">
       </figure>
       <figure class="past-item">
-        <div class="past-img past-ph"></div>
-        <figcaption>feeling vol.2 — 2025</figcaption>
+        <img src="assets/past-03.jpg" alt="展示を見る人々" class="past-img">
       </figure>
       <figure class="past-item">
-        <div class="past-img past-ph"></div>
-        <figcaption>feeling vol.2 — 2025</figcaption>
+        <img src="assets/past-04.jpg" alt="集合写真" class="past-img">
+      </figure>
+      <figure class="past-item past-item--wide">
+        <img src="assets/past-05.jpg" alt="映像展の様子" class="past-img">
       </figure>
     </div>
   </section>
