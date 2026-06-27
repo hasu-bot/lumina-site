@@ -269,6 +269,8 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
   opacity:.28;
   object-fit:cover;
   mix-blend-mode:luminosity;
+  mask-image:radial-gradient(ellipse 80% 80% at center, black 30%, transparent 100%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 80% at center, black 30%, transparent 100%);
 }
 @media(max-width:600px){
   .bg-photo{opacity:.20}
