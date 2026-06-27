@@ -256,6 +256,43 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
   z-index:1;
 }
 
+/* ===== 過去の開催写真グリッド ===== */
+.past-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  padding:48px 0 0;
+  max-width:960px;
+  margin:0 auto;
+}
+.past-item{margin:0}
+.past-img{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  display:block;
+}
+.past-ph{
+  background:linear-gradient(135deg,rgba(111,214,232,.08) 0%,rgba(180,140,255,.12) 50%,rgba(255,209,107,.06) 100%);
+  border:1px solid rgba(255,255,255,.06);
+  position:relative;
+}
+.past-ph::after{
+  content:"photo";
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Cormorant",serif;font-size:.78rem;letter-spacing:.28em;
+  color:rgba(255,255,255,.18);text-transform:uppercase;
+}
+.past-item figcaption{
+  margin-top:.7em;
+  font-family:"Cormorant",serif;font-size:.78rem;letter-spacing:.22em;
+  color:var(--mist-dim);text-transform:uppercase;
+}
+@media(max-width:600px){
+  .past-grid{grid-template-columns:repeat(2,1fr);gap:6px;padding-top:36px}
+}
+
 /* ===== LUMINA CHARACTER ===== */
 .lumina-chara{overflow:visible}
 /* .wrap は max-width:760px で中央揃え。キャラはその右側・テキストの横に配置 */
@@ -304,6 +341,13 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
   }
   .lumina-chara{text-align:center}
   .lumina-caption{max-width:100%}
+}
+
+/* 日本語の自然な文節折り返し */
+.block p, .block h2, .lumina-caption{
+  word-break: auto-phrase;
+  overflow-wrap: break-word;
+  line-break: strict;
 }
 
 /* ===== レスポンシブ typography ===== */
@@ -377,6 +421,25 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
       <h2 class="reveal">feeling という問い。</h2>
       <p class="reveal">feeling は、Creative YOLO が続けてきた写真・映像展シリーズに通底するテーマ。「私たちは何を感じ、何を撮るのか」。</p>
       <p class="reveal">その問いに、毎年ちがう光で答えていく。lumina は、その三度目。前回「feeling」から、表現はさらに広がります。</p>
+    </div>
+    <!-- 過去の開催写真（仮） -->
+    <div class="past-grid reveal">
+      <figure class="past-item">
+        <div class="past-img past-ph"></div>
+        <figcaption>feeling vol.1 — 2024</figcaption>
+      </figure>
+      <figure class="past-item">
+        <div class="past-img past-ph"></div>
+        <figcaption>feeling vol.2 — 2025</figcaption>
+      </figure>
+      <figure class="past-item">
+        <div class="past-img past-ph"></div>
+        <figcaption>feeling vol.2 — 2025</figcaption>
+      </figure>
+      <figure class="past-item">
+        <div class="past-img past-ph"></div>
+        <figcaption>feeling vol.2 — 2025</figcaption>
+      </figure>
     </div>
   </section>
 
