@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">lumina - 光</title>
+  <desc id="desc">YOLO photo and video exhibition lumina OGP image</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0d17"/>
+      <stop offset=".42" stop-color="#1a1548"/>
+      <stop offset="1" stop-color="#2a1234"/>
+    </linearGradient>
+    <radialGradient id="core" cx=".5" cy=".44" r=".5">
+      <stop offset="0" stop-color="#fff8df"/>
+      <stop offset=".18" stop-color="#ffd16b"/>
+      <stop offset=".55" stop-color="#ff7a9c" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#6fd6e8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="285" r="260" fill="url(#core)"/>
+  <g fill="#f4f1e8" text-anchor="middle">
+    <text x="600" y="255" font-family="serif" font-size="128" letter-spacing="10">lumina</text>
+    <text x="600" y="340" font-family="serif" font-size="38" letter-spacing="18">光</text>
+    <text x="600" y="430" font-family="sans-serif" font-size="30" letter-spacing="6">YOLO PHOTO &amp; VIDEO EXHIBITION / 2026</text>
+  </g>
+</svg>
