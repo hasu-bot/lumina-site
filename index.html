@@ -3,361 +3,405 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>lumina — 光 — ｜ feeling vol.3 ｜ Creative YOLO</title>
-<meta name="description" content="それぞれの創作者が持つ光が、ひとつになる。写真・映像展シリーズ feeling 第三回「lumina — 光 —」。2026年10月、熊本県立美術館分館にて。">
+<title>lumina — 光 — ｜ 第3回 写真映像展 ｜ 2026.10.14–10.18 熊本県立美術館 分館</title>
+<meta name="description" content="光は、ひとつじゃない。9名のクリエイターが、それぞれの視点で切り取った「光」を展示する第3回 写真映像展「lumina — 光 —」。2026年10月14日（水）〜18日（日）、熊本県立美術館 分館 2F 展示室2。入場無料。">
+<link rel="canonical" href="https://lumina-site-ecru.vercel.app/">
+<meta name="theme-color" content="#F6F3EC">
 
-<!-- OGP（SNSシェア用・画像は後で差し替え） -->
-<meta property="og:title" content="lumina — 光 — ｜ feeling vol.3">
-<meta property="og:description" content="小さな光が寄り集まり、ひとつの大きな光になる。2026年10月、熊本県立美術館分館。">
 <meta property="og:type" content="website">
-<!-- <meta property="og:image" content="差し替え：1200x630のメインビジュアル"> -->
+<meta property="og:site_name" content="lumina — 光 —">
+<meta property="og:url" content="https://lumina-site-ecru.vercel.app/">
+<meta property="og:title" content="lumina — 光 — ｜ 第3回 写真映像展">
+<meta property="og:description" content="光は、ひとつじゃない。2026.10.14（水）–18（日）｜熊本県立美術館 分館 2F 展示室2｜入場無料">
+<meta property="og:image" content="https://lumina-site-ecru.vercel.app/assets/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="lumina — 光 — ｜ 第3回 写真映像展">
+<meta name="twitter:description" content="光は、ひとつじゃない。2026.10.14–18｜熊本県立美術館 分館｜入場無料">
+<meta name="twitter:image" content="https://lumina-site-ecru.vercel.app/assets/ogp.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ExhibitionEvent",
+  "name":"第3回 写真映像展「lumina — 光 —」",
+  "description":"9名のクリエイターが、それぞれの視点で切り取った「光」を展示する写真映像展。来場者参加型企画 PHOTO MESSAGE も実施。",
+  "startDate":"2026-10-14T09:30+09:00",
+  "endDate":"2026-10-18T16:00+09:00",
+  "eventStatus":"https://schema.org/EventScheduled",
+  "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+  "isAccessibleForFree":true,
+  "image":["https://lumina-site-ecru.vercel.app/assets/ogp.png"],
+  "url":"https://lumina-site-ecru.vercel.app/",
+  "location":{
+    "@type":"Place",
+    "name":"熊本県立美術館 分館 2F 展示室2",
+    "address":{
+      "@type":"PostalAddress",
+      "postalCode":"860-0001",
+      "addressRegion":"熊本県",
+      "addressLocality":"熊本市中央区",
+      "streetAddress":"千葉城町2-18",
+      "addressCountry":"JP"
+    }
+  },
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"JPY","availability":"https://schema.org/InStock","url":"https://lumina-site-ecru.vercel.app/"},
+  "organizer":{"@type":"Organization","name":"YOLO","url":"https://www.instagram.com/creative.yolo/"},
+  "sponsor":{"@type":"Organization","name":"PHOTOPRI"}
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --void:#0B0D17;
-  --void-2:#12152400;
-  --panel:#141829;
-  --line:rgba(255,232,184,.14);
-  --core:#FFE6AE;          /* ひとつの大きな光 */
-  --glow:#FFD16B;
-  --amber:#F5A623;
-  --rose:#FF7A9C;
-  --cyan:#6FD6E8;
-  --violet:#B48CFF;
-  --ink:#F4F1E8;
-  --mist:#9AA0B8;
-  --mist-dim:#5C6178;
+  --paper:#F6F3EC;        /* アイボリー（美術館の壁） */
+  --paper-2:#EFEBE1;
+  --paper-3:#E7E2D5;
+  --white:#FFFEFB;
+  --ink:#1F1E1C;          /* チャコール */
+  --ink-2:#4A4741;
+  --ink-3:#86817A;
+  --line:rgba(31,30,28,.14);
+  --line-2:rgba(31,30,28,.08);
+  --gold:#A5874F;         /* 控えめなゴールド */
+  /* 光のスペクトル（ひとつの光が分かれた色） */
+  --s1:#EFA49B; --s2:#F2C38A; --s3:#EEDC8E; --s4:#B9DBA6; --s5:#9FCBEA; --s6:#BCAEEA;
+  --spectrum:linear-gradient(90deg,var(--s1),var(--s2),var(--s3),var(--s4),var(--s5),var(--s6));
+  --serif-en:"Cormorant Garamond",serif;
+  --serif-ja:"Shippori Mincho",serif;
+  --sans:"Zen Kaku Gothic New",sans-serif;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:hidden}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-  background:linear-gradient(180deg,#0A0C1C 0%,#0D1030 18%,#121038 38%,#170F34 58%,#1A0E28 76%,#120A1A 90%,#08090F 100%);
-  background-attachment:scroll;
+  background:var(--paper);
   color:var(--ink);
-  font-family:"Zen Kaku Gothic New",sans-serif;
-  font-weight:400;
-  line-height:1.9;
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.95;
+  letter-spacing:.04em;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
-  max-width:100vw;
+  font-variant-numeric:lining-nums;
 }
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:#EEDC8E}
 
-/* スクロールで昇る光のにじみ（色変化はbodyのグラデが担当） */
-.scene{position:fixed;inset:0;z-index:-2;pointer-events:none}
-
-/* ===== 共通レイアウト ===== */
-.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 26px}
-.eyebrow{
-  font-family:"Cormorant",serif;
-  font-size:.82rem;
-  letter-spacing:.42em;
-  text-transform:uppercase;
-  color:var(--glow);
-  display:inline-block;
-  margin-bottom:1.4em;
-  padding-left:.42em;
+/* ===== 共通 ===== */
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 32px}
+.label{
+  display:inline-flex;align-items:center;gap:14px;
+  font-family:var(--serif-en);font-weight:500;
+  font-size:.82rem;letter-spacing:.36em;text-transform:uppercase;
+  color:var(--ink-2);
 }
-.reveal{opacity:0;transform:translateY(22px);transition:opacity 1.1s ease,transform 1.1s ease}
+.label::before{content:"";width:36px;height:2px;background:var(--spectrum);border-radius:2px}
+.label .ja{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;color:var(--ink-3);text-transform:none}
+.sec{padding:140px 0;position:relative}
+.sec + .sec{border-top:1px solid var(--line-2)}
+.h2{
+  font-family:var(--serif-ja);font-weight:500;
+  font-size:clamp(1.6rem,3.6vw,2.4rem);
+  line-height:1.6;letter-spacing:.08em;margin-top:28px;
+}
+.jp{word-break:auto-phrase;line-break:strict;overflow-wrap:break-word}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
+
+/* ===== 上部バー（ヒーロー通過後に出現） ===== */
+.bar{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(246,243,236,.86);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line-2);
+  transform:translateY(-100%);transition:transform .5s ease;
+}
+.bar.show{transform:none}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:16px}
+.bar-mark{font-family:var(--serif-en);font-weight:400;font-size:1.45rem;letter-spacing:.06em;text-decoration:none;line-height:1}
+.bar-mark small{font-family:var(--serif-ja);font-size:.72rem;letter-spacing:.3em;color:var(--ink-3);margin-left:.6em}
+.bar-info{display:flex;align-items:center;gap:18px;font-size:.78rem;letter-spacing:.12em;color:var(--ink-2)}
+.bar-info a{
+  text-decoration:none;padding:.45em 1.2em;border:1px solid var(--ink);border-radius:100px;
+  color:var(--ink);transition:background .3s,color .3s;
+}
+.bar-info a:hover,.bar-info a:focus-visible{background:var(--ink);color:var(--paper)}
 
 /* ===== HERO ===== */
 .hero{
-  position:relative;
-  min-height:100svh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:120px 26px 90px;
-  overflow:hidden;
+  position:relative;min-height:100svh;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:0 0 9vh;
+  background:
+    radial-gradient(120% 80% at 70% 30%,var(--white) 0%,rgba(255,254,251,0) 60%),
+    var(--paper);
 }
-#field{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
-.hero-inner{position:relative;z-index:2;max-width:680px}
+.prism{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.prism .beam{stroke:var(--ink);stroke-width:1.1;fill:none;stroke-dasharray:900;stroke-dashoffset:900;animation:draw 1.6s cubic-bezier(.6,0,.2,1) .3s forwards}
+.prism .glass{fill:rgba(255,255,255,.55);stroke:var(--ink);stroke-width:1.1;stroke-linejoin:round;opacity:0;animation:fadein 1.2s ease .9s forwards}
+.prism .fan{opacity:0;mix-blend-mode:multiply;transform-box:fill-box;animation:spread 2.4s cubic-bezier(.2,.7,.2,1) 1.6s forwards}
+.prism .fan-inner{transform-origin:0 50%;transform-box:view-box;animation:breathe 9s ease-in-out 4s infinite}
+.prism .ray{stroke:var(--ink);stroke-width:.6;opacity:.25}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fadein{to{opacity:1}}
+@keyframes spread{from{opacity:0;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
+@keyframes breathe{0%,100%{transform:rotate(0deg)}50%{transform:rotate(1.2deg)}}
 
-.hero .eyebrow{margin-bottom:2.2em;opacity:0;animation:fade 1.4s ease .3s forwards}
-
+.hero-text{position:relative;z-index:2}
+.hero-eyebrow{
+  display:flex;flex-wrap:wrap;gap:6px 22px;align-items:baseline;
+  font-family:var(--serif-ja);font-size:.95rem;letter-spacing:.24em;color:var(--ink-2);
+  opacity:0;animation:rise 1.2s ease 2.2s forwards;
+}
+.hero-eyebrow .en{font-family:var(--serif-en);font-size:.8rem;letter-spacing:.34em;color:var(--ink-3)}
 .logotype{
-  font-family:"Cormorant",serif;
-  font-weight:300;
-  font-size:clamp(4.4rem,22vw,11rem);
-  line-height:.92;
-  letter-spacing:.04em;
-  color:var(--core);
-  text-shadow:0 0 38px rgba(255,209,107,.35),0 0 90px rgba(255,209,107,.18);
-  opacity:0;
-  animation:lumen 2.4s ease .5s forwards;
+  font-family:var(--serif-en);font-weight:300;
+  font-size:clamp(5.2rem,17vw,13.5rem);
+  line-height:.86;letter-spacing:-.005em;margin:.12em 0 0 -.05em;
+  opacity:0;animation:rise 1.4s ease 2.35s forwards;
 }
-.kanji{
-  font-family:"Shippori Mincho",serif;
-  font-weight:400;
-  font-size:clamp(.95rem,4.4vw,1.3rem);
-  letter-spacing:1.1em;
-  color:var(--glow);
-  margin:1.4em 0 0 1.1em;
-  opacity:0;
-  animation:fade 1.6s ease 1.4s forwards;
+.logotype .kanji{
+  display:inline-flex;align-items:center;gap:.5em;vertical-align:middle;
+  font-family:var(--serif-ja);font-weight:400;font-size:.18em;letter-spacing:.2em;
+  margin-left:.35em;color:var(--ink-2);transform:translateY(-.5em);
 }
-.kanji::before,.kanji::after{content:"—";color:var(--mist-dim);margin:0 .5em;letter-spacing:0}
-
-.hero-sub{
-  font-family:"Zen Kaku Gothic New",sans-serif;
-  font-size:.8rem;letter-spacing:.34em;color:var(--mist);
-  margin-top:1.8em;opacity:0;animation:fade 1.6s ease 1.6s forwards;
-}
-.tagline{
-  font-family:"Shippori Mincho",serif;
-  font-weight:400;
-  font-size:clamp(1rem,3.6vw,1.18rem);
-  letter-spacing:.16em;
-  color:var(--ink);
-  margin-top:2.6em;
-  opacity:0;
-  animation:fade 1.6s ease 1.8s forwards;
+.logotype .kanji i{display:block;width:1.6em;height:1px;background:var(--ink-3)}
+.catch{
+  font-family:var(--serif-ja);font-weight:500;
+  font-size:clamp(1.35rem,3vw,2rem);letter-spacing:.18em;
+  margin-top:.9em;
+  opacity:0;animation:rise 1.4s ease 2.6s forwards;
 }
 .hero-meta{
-  margin-top:2.4em;
-  font-size:.86rem;
-  letter-spacing:.22em;
-  color:var(--mist);
-  opacity:0;
-  animation:fade 1.6s ease 2.2s forwards;
+  display:flex;flex-wrap:wrap;gap:0;margin-top:2.4em;
+  border-top:1px solid var(--line);
+  opacity:0;animation:rise 1.4s ease 2.85s forwards;
 }
-.hero-meta b{color:var(--ink);font-weight:500}
-.hero-meta span{color:var(--mist-dim);margin:0 .9em}
+.hero-meta div{padding:1.1em 2.4em 0 0;margin-right:2.4em;border-right:1px solid var(--line)}
+.hero-meta div:last-child{border-right:0;margin-right:0}
+.hero-meta dt{font-family:var(--serif-en);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3)}
+.hero-meta dd{font-size:1rem;letter-spacing:.08em;line-height:1.7}
+.hero-meta dd .num{font-family:var(--serif-en);font-size:1.5rem;font-weight:400;letter-spacing:.02em}
+.hero-meta dd small{font-size:.78rem;color:var(--ink-2)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 
-.scroll-hint{
-  position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
-  z-index:2;font-family:"Cormorant",serif;font-size:.74rem;letter-spacing:.4em;
-  color:var(--mist-dim);text-transform:uppercase;
-  opacity:0;animation:fade 1.6s ease 2.6s forwards;
+/* ===== ABOUT ===== */
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:start;margin-top:8px}
+.about-copy{
+  font-family:var(--serif-ja);font-weight:500;
+  font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.55;letter-spacing:.1em;margin-top:28px;
 }
-.scroll-hint::after{content:"";display:block;width:1px;height:42px;margin:14px auto 0;
-  background:linear-gradient(var(--glow),transparent);animation:drop 2.2s ease-in-out infinite}
+.about-copy .shine{
+  background:linear-gradient(90deg,#C9665B,#C98B3E,#9EAB4E,#4E9BB8,#7C68C4);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.about-body{padding-top:44px}
+.about-body p{font-size:1.02rem;color:var(--ink-2);line-height:2.15}
+.about-body p + p{margin-top:1.6em}
+.about-body .verbs{font-family:var(--serif-ja);color:var(--ink);font-size:1.12rem;letter-spacing:.14em}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:88px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:30px 0 26px;text-align:center}
+.stat + .stat{border-left:1px solid var(--line)}
+.stat b{display:block;font-family:var(--serif-en);font-weight:300;font-size:clamp(2.8rem,6vw,4.2rem);line-height:1;letter-spacing:.02em}
+.stat span{display:block;margin-top:.7em;font-size:.8rem;letter-spacing:.24em;color:var(--ink-2)}
 
-@keyframes fade{to{opacity:1}}
-@keyframes lumen{0%{opacity:0;filter:blur(14px);transform:scale(1.04)}100%{opacity:1;filter:blur(0);transform:none}}
-@keyframes drop{0%,100%{transform:scaleY(.4);transform-origin:top;opacity:.4}50%{transform:scaleY(1);opacity:1}}
+/* ===== THREE（体験の3本柱） ===== */
+.three{background:var(--paper-2)}
+.three-head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap}
+.three-head p{max-width:26em;color:var(--ink-2);font-size:.95rem}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:64px}
+.pillar{
+  position:relative;background:var(--white);border:1px solid var(--line-2);
+  padding:40px 34px 38px;display:flex;flex-direction:column;
+}
+.pillar::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--c)}
+.pillar .no{font-family:var(--serif-en);font-style:italic;font-size:1rem;color:var(--ink-3);letter-spacing:.1em}
+.pillar h3{margin-top:18px;font-family:var(--serif-en);font-weight:500;font-size:1.55rem;letter-spacing:.14em;line-height:1.2}
+.pillar .sub{margin-top:10px;font-family:var(--serif-ja);font-size:1.02rem;letter-spacing:.1em}
+.pillar p{margin-top:22px;font-size:.93rem;color:var(--ink-2);line-height:2.05}
+.pillar a{margin-top:auto;padding-top:26px;font-size:.84rem;letter-spacing:.14em;text-decoration:none;color:var(--ink)}
+.pillar a span{border-bottom:1px solid var(--ink)}
 
-/* ===== セクション共通 ===== */
-section{position:relative;z-index:1}
-.block{padding:120px 0}
-.block h2{
-  font-family:"Shippori Mincho",serif;
-  font-weight:600;
-  font-size:clamp(1.7rem,6.4vw,2.5rem);
-  line-height:1.5;
-  letter-spacing:.06em;
-  margin-bottom:1.1em;
+/* ===== PHOTO MESSAGE ===== */
+.pm-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:90px;align-items:center}
+.pm-body p{margin-top:26px;color:var(--ink-2);font-size:1.02rem;line-height:2.15}
+.pm-steps{list-style:none;margin-top:40px;border-top:1px solid var(--line)}
+.pm-steps li{display:grid;grid-template-columns:3.2em 1fr;padding:18px 0;border-bottom:1px solid var(--line);font-size:.95rem;align-items:baseline}
+.pm-steps li b{font-family:var(--serif-en);font-weight:400;font-style:italic;font-size:1.25rem;color:var(--gold)}
+.pm-note{margin-top:22px;font-size:.82rem !important;color:var(--ink-3) !important;line-height:1.9 !important}
+.cheki-stage{position:relative;height:500px;max-width:540px;width:100%;margin-left:auto}
+.cheki{
+  position:absolute;width:230px;background:var(--white);
+  padding:14px 14px 58px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 18px 40px -18px rgba(60,50,30,.28);
 }
-.block p{font-size:1rem;color:#D9DCE8;max-width:38em}
-.block p + p{margin-top:1.3em}
-.lead{color:var(--ink) !important;font-size:1.06rem !important}
-
-/* コンセプト：中央の光 */
-.concept{text-align:center}
-.concept .wrap{display:flex;flex-direction:column;align-items:center}
-.concept h2{margin-bottom:1.4em}
-.concept p{text-align:center;max-width:30em}
-/* コンセプトの光：ひとつの光のまわりを、小さな色の光がめぐる */
-.cl{position:relative;width:150px;height:150px;margin:0 auto 3.6em}
-.cl-bloom,.cl-core{position:absolute;left:50%;top:50%;border-radius:50%;transform:translate(-50%,-50%)}
-.cl-bloom{
-  width:150px;height:150px;
-  background:radial-gradient(circle,rgba(255,209,107,.22) 0%,rgba(255,170,80,.07) 42%,transparent 70%);
-  animation:cl-breathe 6.5s ease-in-out infinite;
+.cheki .pic{aspect-ratio:54/72;position:relative;overflow:hidden}
+.cheki .cap{position:absolute;left:18px;right:18px;bottom:14px;font-family:var(--serif-ja);font-size:.86rem;letter-spacing:.1em;color:var(--ink-2);display:flex;justify-content:space-between;align-items:baseline}
+.cheki .cap b{font-family:var(--serif-en);font-weight:500;font-size:1.15rem;color:var(--ink);letter-spacing:.06em}
+.cheki-now{left:0;top:20px;transform:rotate(-5deg)}
+.cheki-now .pic{background:
+  radial-gradient(60% 50% at 30% 30%,rgba(255,255,255,.9),transparent 70%),
+  linear-gradient(160deg,var(--s2),var(--s1) 45%,var(--s6));}
+.cheki-future{right:0;top:70px;transform:rotate(4deg)}
+.cheki-future .pic{background:
+  radial-gradient(60% 50% at 70% 35%,rgba(255,255,255,.9),transparent 70%),
+  linear-gradient(200deg,var(--s5),var(--s4) 50%,var(--s3));}
+.cheki .pic::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 2px,transparent 2px 4px)}
+.cheki-arrow{
+  position:absolute;left:50%;bottom:34px;width:140px;height:46px;transform:translateX(-50%);
 }
-.cl-core{
-  width:42px;height:42px;
-  background:radial-gradient(circle at 50% 44%,#FFFCF3 0%,#FFEBC2 26%,#FFD16B 56%,rgba(255,200,110,.25) 84%,transparent 100%);
-  box-shadow:0 0 22px 3px rgba(255,224,150,.55),0 0 56px 14px rgba(255,209,107,.30),0 0 120px 44px rgba(255,160,70,.10);
-  animation:cl-pulse 6.5s ease-in-out infinite;
-}
-.cl-orbit{position:absolute;left:50%;top:50%;width:0;height:0;transform:translate(-50%,-50%)}
-.cl-orbit i{position:absolute;left:0;top:0;width:5px;height:5px;border-radius:50%;
-  background:radial-gradient(circle,#fff 0%,var(--c) 48%,transparent 78%);
-  box-shadow:0 0 8px 1px var(--c);transform:translate(-50%,-50%)}
-.cl-o1{animation:cl-spin 16s linear infinite}
-.cl-o1 i{left:58px}
-.cl-o2{animation:cl-spin 23s linear infinite reverse}
-.cl-o2 i{left:-70px}
-.cl-o3{animation:cl-spin 30s linear infinite}
-.cl-o3 i{top:64px}
-@keyframes cl-breathe{0%,100%{opacity:.7;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}}
-@keyframes cl-pulse{0%,100%{transform:translate(-50%,-50%) scale(1);filter:brightness(1)}50%{transform:translate(-50%,-50%) scale(1.05);filter:brightness(1.12)}}
-@keyframes cl-spin{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
-
-/* インフォ */
-.info-grid{border-top:1px solid var(--line)}
-.info-row{
-  display:grid;grid-template-columns:7.5em 1fr;gap:1.5em;
-  padding:1.6em 0;border-bottom:1px solid var(--line);align-items:baseline;
-}
-.info-row dt{
-  font-family:"Cormorant",serif;font-size:.92rem;letter-spacing:.28em;
-  text-transform:uppercase;color:var(--glow);
-}
-.info-row dd{font-size:1.02rem;color:var(--ink)}
-.info-row dd small{display:block;color:var(--mist);font-size:.82rem;letter-spacing:.04em;margin-top:.3em}
-
-/* ===== 全セクション共通：creatorsと同じ光の背景 ===== */
-.block::before{
-  content:"";position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);
-  width:min(960px,130%);height:560px;z-index:0;pointer-events:none;
-  background:radial-gradient(ellipse at center,rgba(255,209,107,.12) 0%,rgba(180,140,255,.07) 38%,transparent 70%);
-  filter:blur(18px);animation:cbloom 8s ease-in-out infinite;
+.cheki-arrow path{fill:none;stroke:var(--ink);stroke-width:1}
+.cheki-tag{
+  position:absolute;left:50%;bottom:0;transform:translateX(-50%);white-space:nowrap;font-family:var(--serif-en);font-style:italic;font-size:1.05rem;color:var(--ink-2);letter-spacing:.08em;
 }
 
-/* クリエイターの浮遊ドット（既存） */
-.glow-field{position:absolute;inset:0;z-index:1;pointer-events:none}
-.glow-field .gm{position:absolute;border-radius:50%;
-  background:radial-gradient(circle,#fff 0%,var(--c) 42%,transparent 74%);
-  animation:gtw var(--t,4s) ease-in-out infinite;
+/* ===== EXHIBITORS ===== */
+.ex-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.ex-head p{font-size:.85rem;color:var(--ink-3);letter-spacing:.14em}
+.ex-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px;border-top:1px solid var(--line)}
+.ex-list li{
+  position:relative;display:flex;align-items:center;gap:20px;
+  padding:34px 8px 34px 4px;border-bottom:1px solid var(--line);
+  overflow:hidden;
 }
-@keyframes gtw{0%,100%{opacity:.22;transform:scale(.7)}50%{opacity:1;transform:scale(1.18)}}
+.ex-list li:not(:nth-child(3n+1)){padding-left:32px;border-left:1px solid var(--line)}
+.ex-list .dot{
+  flex:none;width:12px;height:12px;border-radius:50%;background:var(--c);
+  box-shadow:0 0 0 5px color-mix(in srgb,var(--c) 22%,transparent);
+  transition:box-shadow .5s ease;
+}
+.ex-list li::after{
+  content:"";position:absolute;right:-60px;top:50%;width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(circle,color-mix(in srgb,var(--c) 45%,transparent),transparent 70%);
+  transform:translateY(-50%) scale(.4);opacity:0;transition:opacity .6s ease,transform .8s ease;pointer-events:none;
+}
+.ex-list li:hover::after{opacity:1;transform:translateY(-50%) scale(1)}
+.ex-list li:hover .dot{box-shadow:0 0 0 9px color-mix(in srgb,var(--c) 28%,transparent)}
+.ex-list .name{font-family:var(--serif-ja);font-weight:500;font-size:1.28rem;letter-spacing:.12em;line-height:1.5}
+.ex-list .idx{margin-left:auto;font-family:var(--serif-en);font-style:italic;font-size:.9rem;color:var(--ink-3)}
 
-/* SNS */
-.sns{text-align:center}
-.sns .wrap{display:flex;flex-direction:column;align-items:center}
-.sns h2{margin-bottom:.7em}
-.sns p{text-align:center}
-.cta{
-  display:inline-flex;align-items:center;gap:.6em;margin-top:2.4em;
-  padding:1em 2.2em;border:1px solid var(--glow);border-radius:100px;
-  color:var(--core);text-decoration:none;font-weight:500;letter-spacing:.08em;
-  transition:background .4s ease,color .4s ease,box-shadow .4s ease;
-}
-.cta:hover,.cta:focus-visible{
-  background:var(--glow);color:var(--void);
-  box-shadow:0 0 30px rgba(255,209,107,.4);outline:none;
-}
-.tags{margin-top:2em;font-family:"Cormorant",serif;letter-spacing:.16em;color:var(--mist);font-size:.92rem}
+/* ===== PAST ===== */
+.past{background:var(--paper-2)}
+.past-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;grid-template-rows:auto auto;gap:14px;margin-top:56px}
+.past-grid figure{overflow:hidden;background:var(--paper-3)}
+.past-grid img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.past-grid figure:hover img{transform:scale(1.03)}
+.past-grid .p1{grid-row:span 2}
+.past-grid .p2{grid-column:span 2;aspect-ratio:16/8}
+.past-grid .p3,.past-grid .p4{aspect-ratio:4/3}
+.past-cap{margin-top:18px;font-size:.8rem;color:var(--ink-3);letter-spacing:.1em}
 
-/* フッター */
-footer{padding:64px 0 80px;text-align:center;border-top:1px solid var(--line)}
-.foot-mark{font-family:"Cormorant",serif;font-size:1.5rem;letter-spacing:.3em;color:var(--ink)}
-.foot-sub{margin-top:.8em;font-size:.78rem;letter-spacing:.3em;color:var(--mist-dim)}
+/* ===== INFORMATION ===== */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:40px}
+.info-title{font-family:var(--serif-ja);font-weight:500;font-size:clamp(1.3rem,2.6vw,1.7rem);letter-spacing:.1em;line-height:1.7}
+.info-dl{margin-top:36px;border-top:1px solid var(--line)}
+.info-dl div{display:grid;grid-template-columns:6.5em 1fr;gap:1em;padding:22px 0;border-bottom:1px solid var(--line)}
+.info-dl dt{font-size:.82rem;letter-spacing:.2em;color:var(--ink-3);padding-top:.25em}
+.info-dl dd{font-size:1.02rem;line-height:1.85}
+.info-dl dd .big{font-family:var(--serif-en);font-size:1.6rem;font-weight:400;letter-spacing:.02em;line-height:1.3}
+.info-dl dd small{display:block;font-size:.84rem;color:var(--ink-2)}
+.info-side{padding-top:6px}
+.access h3{font-family:var(--serif-en);font-weight:500;font-size:.85rem;letter-spacing:.34em;text-transform:uppercase;color:var(--ink-2)}
+.access ul{list-style:none;margin-top:18px}
+.access li{position:relative;padding:14px 0 14px 1.4em;border-bottom:1px solid var(--line-2);font-size:.93rem;line-height:1.8;color:var(--ink-2)}
+.access li::before{content:"";position:absolute;left:0;top:1.35em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.access li b{color:var(--ink);font-weight:500}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:.7em;
+  padding:1em 1.8em;border-radius:100px;text-decoration:none;
+  font-size:.88rem;letter-spacing:.12em;border:1px solid var(--ink);
+  transition:background .3s ease,color .3s ease;
+}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.solid:hover,.btn.solid:focus-visible{background:#3A3834}
+.btn.ghost:hover,.btn.ghost:focus-visible{background:var(--ink);color:var(--paper)}
+.btn svg{width:14px;height:14px}
 
-a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3px}
+/* ===== CREDIT ===== */
+.credit{padding:0 0 120px}
+.credit-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.credit-row div{padding:40px 0;text-align:center}
+.credit-row div + div{border-left:1px solid var(--line)}
+.credit-row dt{font-size:.8rem;letter-spacing:.4em;color:var(--ink-3)}
+.credit-row dd{margin-top:14px;font-family:var(--serif-en);font-weight:500;font-size:1.9rem;letter-spacing:.2em}
 
-/* ===== HERO シルエット ===== */
-.lumina-shadow{
-  position:absolute;
-  right:6vw;
-  bottom:0;
-  width:clamp(160px,22vw,300px);
-  opacity:.72;
-  pointer-events:none;
-  animation:lumina-float 6s ease-in-out infinite;
-  z-index:1;
-}
+/* ===== FOLLOW ===== */
+.follow{text-align:center;padding:130px 0 140px}
+.follow .label{justify-content:center}
+.follow .h2{margin-top:24px}
+.follow p{margin-top:14px;color:var(--ink-2);font-size:.95rem}
+.follow .btns{justify-content:center;margin-top:40px}
+.tags{margin-top:30px;font-family:var(--serif-en);font-size:.95rem;letter-spacing:.12em;color:var(--ink-3)}
+.tags span{margin:0 .6em;white-space:nowrap}
 
-/* ===== 過去の開催写真グリッド ===== */
-/* ===== 散在する過去写真 ===== */
-.block{overflow:hidden}
-/* .gm の overflow も封じる */
-.glow-field{overflow:hidden}
-.bg-photo{
-  position:absolute;
-  pointer-events:none;
-  z-index:0;
-  opacity:.28;
-  object-fit:cover;
-  mix-blend-mode:luminosity;
-  mask-image:radial-gradient(ellipse 80% 80% at center, black 30%, transparent 100%);
-  -webkit-mask-image:radial-gradient(ellipse 80% 80% at center, black 30%, transparent 100%);
-}
-@media(max-width:600px){
-  .bg-photo{opacity:.20}
-}
+footer{border-top:1px solid var(--line);padding:46px 0 54px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot-mark{font-family:var(--serif-en);font-weight:300;font-size:2rem;letter-spacing:.04em;line-height:1}
+.foot-mark small{font-family:var(--serif-ja);font-size:.75rem;letter-spacing:.3em;margin-left:.6em;color:var(--ink-3)}
+.foot-sub{font-size:.76rem;letter-spacing:.24em;color:var(--ink-3)}
+.spectrum-rule{height:3px;background:var(--spectrum)}
 
-/* ===== LUMINA CHARACTER ===== */
-.lumina-chara{overflow:visible}
-/* .wrap は max-width:760px で中央揃え。キャラはその右側・テキストの横に配置 */
-.lumina-img{
-  position:absolute;
-  /* ビューポート中央から .wrap 幅の半分 + 少し内側 */
-  left:calc(50% + 200px);
-  top:50%;
-  transform:translateY(-50%);
-  width:clamp(140px,18vw,200px);
-  filter:drop-shadow(0 0 28px rgba(180,200,255,.7))
-         drop-shadow(0 0 8px rgba(200,220,255,.5));
-  animation:lumina-float 5s ease-in-out infinite;
-  pointer-events:none;
-}
-@keyframes lumina-float{
-  0%,100%{transform:translateY(-50%) rotate(-2deg)}
-  50%{transform:translateY(calc(-50% - 14px)) rotate(2deg)}
-}
-.lumina-caption{
-  font-family:"Shippori Mincho",serif;
-  font-size:1rem;
-  letter-spacing:.08em;
-  color:var(--mist);
-  line-height:2.2;
-  max-width:24em;
-}
-@media(max-width:900px){
-  .lumina-img{
-    left:calc(50% + 140px);
-    width:clamp(120px,16vw,160px);
-  }
-}
-@media(max-width:600px){
-  .lumina-img{
-    position:static;
-    display:block;
-    transform:none;
-    margin:2em auto 0;
-    width:clamp(120px,48vw,160px);
-    animation:lumina-float-sp 5s ease-in-out infinite;
-  }
-  @keyframes lumina-float-sp{
-    0%,100%{transform:translateY(0) rotate(-2deg)}
-    50%{transform:translateY(-14px) rotate(2deg)}
-  }
-  .lumina-chara{text-align:center}
-  .lumina-caption{max-width:100%}
-}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
 
-/* 日本語の自然な文節折り返し */
-.block p, .block h2, .lumina-caption{
-  word-break: auto-phrase;
-  overflow-wrap: break-word;
-  line-break: strict;
+/* ===== レスポンシブ ===== */
+@media (max-width:960px){
+  .about-grid,.pm-grid,.info-grid{grid-template-columns:1fr;gap:48px}
+  .about-body{padding-top:0}
+  .pillars{grid-template-columns:1fr;gap:18px}
+  .ex-list{grid-template-columns:1fr 1fr}
+  .ex-list li:not(:nth-child(3n+1)){padding-left:4px;border-left:0}
+  .ex-list li:nth-child(2n){padding-left:28px;border-left:1px solid var(--line)}
+  .cheki-stage{max-width:520px;margin:0 auto;width:100%}
 }
-
-/* ===== レスポンシブ typography ===== */
-@media (max-width:768px){
-  .wrap{padding:0 22px}
-  .block h2{letter-spacing:.04em;text-wrap:balance}
-  .block p{font-size:.97rem;max-width:100%}
-  .eyebrow{font-size:.76rem;letter-spacing:.28em;padding-left:.28em}
-  .cta{font-size:.88rem;letter-spacing:.06em}
-  .tags{font-size:.82rem;letter-spacing:.1em}
-}
-@media (max-width:480px){
-  .info-row{grid-template-columns:1fr;gap:.5em}
-  .block{padding:88px 0}
-  .block h2{font-size:clamp(1.5rem,7.5vw,2rem)}
-  /* ヒーロー：字間を狭めて自然な折り返しに */
-  .logotype{letter-spacing:.02em}
-  .tagline{letter-spacing:.06em;font-size:.95rem}
-  .hero-meta{letter-spacing:.12em;font-size:.78rem}
-  .kanji{letter-spacing:.14em}
-  .kanji::before,.kanji::after{margin:0 .3em}
+@media (max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:0 20px}
+  .sec{padding:96px 0}
+  .hero{padding-bottom:7vh}
+  .prism{height:52svh;top:0}
+  .hero-meta{flex-direction:column}
+  .hero-meta div{border-right:0;margin-right:0;padding:.9em 0 .9em;border-bottom:1px solid var(--line)}
+  .hero-meta div:last-child{border-bottom:0}
+  .hero-meta dd .num{font-size:1.3rem}
+  .hero-eyebrow{font-size:.85rem;letter-spacing:.18em}
+  .logotype .kanji{display:flex;margin:.9em 0 0 .3em;transform:none;font-size:.2em}
+  .catch{letter-spacing:.12em}
+  .stats{margin-top:60px}
+  .stat b{font-size:2.5rem}
+  .stat span{font-size:.7rem;letter-spacing:.14em}
+  .pillar{padding:32px 24px 30px}
+  .ex-list{grid-template-columns:1fr}
+  .ex-list li,.ex-list li:nth-child(2n),.ex-list li:not(:nth-child(3n+1)){padding:22px 4px;border-left:0}
+  .ex-list .name{font-size:1.15rem}
+  .cheki-stage{height:380px}
+  .cheki{width:170px;padding:10px 10px 46px}
+  .cheki .cap{left:12px;right:12px;bottom:11px;font-size:.74rem}
+  .cheki .cap b{font-size:1rem}
+  .cheki-now{left:0;top:10px}
+  .cheki-future{right:0;top:60px}
+  .cheki-arrow{bottom:30px;width:100px}
+  .past-grid{grid-template-columns:1fr 1fr}
+  .past-grid .p1{grid-row:auto;grid-column:span 2;aspect-ratio:4/3}
+  .past-grid .p2{grid-column:span 2}
+  .info-dl div{grid-template-columns:1fr;gap:.2em}
+  .credit-row dd{font-size:1.4rem;letter-spacing:.14em}
+  .bar-info .when{display:none}
+  .btn{width:100%;justify-content:center}
 }
 
 @media (prefers-reduced-motion:reduce){
-  *{animation:none !important;transition:none !important}
-  .reveal{opacity:1;transform:none}
-  .hero .eyebrow,.logotype,.kanji,.tagline,.hero-meta,.scroll-hint{opacity:1}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .reveal,.hero-eyebrow,.logotype,.catch,.hero-meta,.prism .glass,.prism .fan{opacity:1;transform:none}
+  .prism .beam{stroke-dashoffset:0}
+  html{scroll-behavior:auto}
 }
 </style>
 <meta name="google-site-verification" content="7he0VVTEDO85Pbl_M7TtZ8FH4aKwiqdkvu4j-QHQOwU" />
@@ -366,465 +410,292 @@ a:focus-visible{outline:2px solid var(--glow);outline-offset:4px;border-radius:3
 </head>
 <body>
 
-<div class="scene" id="scene" aria-hidden="true"></div>
-<canvas id="field" aria-hidden="true"></canvas>
-
-<header class="hero">
-  <div class="hero-inner">
-    <span class="eyebrow">feeling vol.3 &nbsp;/&nbsp; 2026</span>
-    <h1 class="logotype">lumina</h1>
-    <div class="kanji">光</div>
-    <p class="hero-sub">第3回 YOLO写真映像展</p>
-    <p class="tagline">私たちは何を感じ、何を撮るのか。</p>
-    <p class="hero-meta"><b>2026.10</b><span>｜</span>熊本県立美術館分館</p>
+<!-- 上部バー -->
+<nav class="bar" id="bar" aria-label="サイト内ナビゲーション">
+  <div class="wrap">
+    <a href="#top" class="bar-mark">lumina<small>光</small></a>
+    <div class="bar-info">
+      <span class="when">10.14 – 10.18 ｜ 入場無料</span>
+      <a href="#info">開催情報</a>
+    </div>
   </div>
-  <img src="assets/lumina-shadow.png" alt="" class="lumina-shadow" aria-hidden="true">
-  <div class="scroll-hint">scroll</div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="top">
+  <!-- ひとつの光がプリズムを通り、いくつもの光に分かれる -->
+  <svg class="prism" id="prism" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <filter id="soft" x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="14"/></filter>
+      <linearGradient id="fade" x1="0" x2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity="1"/>
+        <stop offset=".75" stop-color="#fff" stop-opacity=".9"/>
+        <stop offset="1" stop-color="#fff" stop-opacity=".35"/>
+      </linearGradient>
+      <mask id="fanMask"><rect x="0" y="0" width="1440" height="900" fill="url(#fade)"/></mask>
+    </defs>
+    <line class="beam" x1="-20" y1="352" x2="718" y2="298"/>
+    <g class="fan" mask="url(#fanMask)">
+      <g id="fanScale">
+      <g class="fan-inner" filter="url(#soft)">
+        <polygon points="800,286 1480,-40 1480,70"   fill="#EFA49B"/>
+        <polygon points="800,290 1480,70 1480,190"   fill="#F2C38A"/>
+        <polygon points="800,294 1480,190 1480,310"  fill="#EEDC8E"/>
+        <polygon points="800,298 1480,310 1480,430"  fill="#B9DBA6"/>
+        <polygon points="800,302 1480,430 1480,550"  fill="#9FCBEA"/>
+        <polygon points="800,306 1480,550 1480,680"  fill="#BCAEEA"/>
+      </g>
+      </g>
+      <line class="ray" x1="800" y1="286" x2="1480" y2="-40"/>
+      <line class="ray" x1="800" y1="306" x2="1480" y2="680"/>
+    </g>
+    <polygon class="glass" points="770,190 700,330 842,330"/>
+  </svg>
+
+  <div class="wrap hero-text">
+    <p class="hero-eyebrow"><span>第3回 写真映像展</span><span class="en">YOLO Photo &amp; Video Exhibition 2026</span></p>
+    <h1 class="logotype">lumina<span class="kanji"><i></i>光<i></i></span></h1>
+    <p class="catch jp">光は、ひとつじゃない。</p>
+    <dl class="hero-meta">
+      <div><dt>Date</dt><dd><span class="num">2026.10.14 – 10.18</span> <small>水 – 日</small></dd></div>
+      <div><dt>Venue</dt><dd>熊本県立美術館 分館<br><small>2F 展示室2</small></dd></div>
+      <div><dt>Entry</dt><dd>入場無料</dd></div>
+    </dl>
+  </div>
 </header>
 
 <main>
 
-  <section class="block concept">
-    <img src="assets/past-01.jpg" alt="" class="bg-photo" aria-hidden="true"
-         style="width:55%;right:-8%;top:10%;transform:rotate(3deg)">
+  <!-- ===== ABOUT ===== -->
+  <section class="sec" id="about">
     <div class="wrap">
-      <div class="cl reveal" aria-hidden="true">
-        <span class="cl-bloom"></span>
-        <span class="cl-core"></span>
-        <span class="cl-orbit cl-o1"><i style="--c:#6FD6E8"></i></span>
-        <span class="cl-orbit cl-o2"><i style="--c:#FF7A9C"></i></span>
-        <span class="cl-orbit cl-o3"><i style="--c:#B48CFF"></i></span>
+      <span class="label reveal">About<span class="ja">この展示について</span></span>
+      <div class="about-grid">
+        <p class="about-copy jp reveal">光は、<br><span class="shine">ひとつじゃない。</span></p>
+        <div class="about-body">
+          <p class="jp reveal">写真や映像を通して、それぞれが見つけた「光」に出会う5日間。</p>
+          <p class="jp reveal">9名のクリエイターが、それぞれの視点で切り取った作品を展示します。</p>
+          <p class="verbs jp reveal">見ること。撮ること。つくること。</p>
+          <p class="jp reveal">作品との出会いが、新しい表現や、人とのつながりになる。そんな場所を目指した写真映像展です。</p>
+        </div>
       </div>
-      <span class="eyebrow reveal">concept</span>
-      <h2 class="reveal">それぞれの、光。</h2>
-      <p class="lead reveal">「lumina」は、光をテーマにした写真展ではありません。</p>
-      <p class="reveal">創作する一人ひとりが内に持つ、その人だけの光のこと。ジャンルも、表現も、見つめる先も違う。それでも同じ場所に集まったとき、小さな光は寄り集まり、ひとつの大きな光になる。</p>
-      <p class="reveal">——これは、その瞬間を見にくる展示です。</p>
+      <div class="stats reveal" role="list">
+        <div class="stat" role="listitem"><b>9</b><span>CREATORS</span></div>
+        <div class="stat" role="listitem"><b>5</b><span>DAYS</span></div>
+        <div class="stat" role="listitem"><b>Free</b><span>ENTRY</span></div>
+      </div>
     </div>
   </section>
 
-  <section class="block">
-    <img src="assets/past-02.jpg" alt="" class="bg-photo" aria-hidden="true"
-         style="width:44%;right:-4%;top:50%;transform:translateY(-50%) rotate(-3deg)">
+  <!-- ===== 3本柱 ===== -->
+  <section class="sec three" id="features">
     <div class="wrap">
-      <span class="eyebrow reveal">the series</span>
-      <h2 class="reveal">feeling という問い。</h2>
-      <p class="reveal">feeling は、Creative YOLO が続けてきた写真・映像展シリーズに通底するテーマ。「私たちは何を感じ、何を撮るのか」。</p>
-      <p class="reveal">その問いに、毎年ちがう光で答えていく。lumina は、その三度目。前回「feeling」から、表現はさらに広がります。</p>
-    </div>
-  </section>
-
-  <!-- ④ EXHIBITION（draft：トーン確認用の仮コピー） -->
-  <section class="block">
-    <div class="wrap">
-      <span class="eyebrow reveal">exhibition</span>
-      <h2 class="reveal">写真と映像が、集まる。</h2>
-      <p class="reveal">熊本県立美術館 分館の空間に、創作者それぞれの「光」が並びます。写真、映像、そしてジャンルにとらわれない表現も。</p>
-      <p class="reveal">一枚ずつは小さな光でも、会場全体でひとつの大きな光景になる。</p>
-    </div>
-  </section>
-
-  <!-- ⑤ JOIN（CREATORSより先に配置：募集導線） -->
-  <section class="block">
-    <img src="assets/past-05.jpg" alt="" class="bg-photo" aria-hidden="true"
-         style="width:42%;right:-4%;top:50%;transform:translateY(-50%) rotate(2deg)">
-    <div class="wrap">
-      <span class="eyebrow reveal">join</span>
-      <h2 class="reveal">あなたの光も、この場所へ。</h2>
-      <p class="reveal">ポートレート、風景、スナップ、映像——ジャンルは問いません。</p>
-      <p class="reveal">lumina は、創作する一人ひとりが内に持つ光を集める展示です。出展希望の方は、応募フォームからご応募ください。</p>
-      <p class="reveal" style="font-size:.88rem;color:var(--mist);letter-spacing:.04em;">※ 本展示はCreative YOLO Discordコミュニティへの参加が出展条件となります。</p>
-      <a class="cta reveal" href="https://docs.google.com/forms/d/1H2IOkfsy-6pgAxtzKYnceNHVywKlholfBpN9XkINYSA/viewform" target="_blank" rel="noopener">出展に応募する →</a>
-    </div>
-  </section>
-
-  <!-- ⑥ CREATORS（人数を出さず「集まりはじめた」見せ方） -->
-  <section class="block creators">
-    <img src="assets/past-03.jpg" alt="" class="bg-photo" aria-hidden="true"
-         style="width:50%;right:-4%;top:15%;transform:rotate(-2deg)">
-    <div class="glow-field" id="glowField" aria-hidden="true"></div>
-    <div class="wrap">
-      <span class="eyebrow reveal">creators</span>
-      <h2 class="reveal">集まりはじめた、光。</h2>
-      <p class="reveal">熊本を拠点に活動する創作者たちが、それぞれの視点で「光」を持ち寄ります。</p>
-      <p class="reveal">出展者は、順次公開予定です。</p>
-    </div>
-  </section>
-
-  <!-- ⑦ SMALL EXPERIENCE（draft：仕掛けは"ちょい出し"に留める） -->
-  <section class="block">
-    <img src="assets/past-04.jpg" alt="" class="bg-photo" aria-hidden="true"
-         style="width:44%;left:-4%;top:50%;transform:translateY(-50%) rotate(3deg)">
-    <div class="wrap">
-      <span class="eyebrow reveal">experience</span>
-      <h2 class="reveal">あなたも、光のひとつになる。</h2>
-      <p class="reveal">会場には、来場者が参加できる小さな仕掛けを用意しています。スマートフォンからの参加で、会場の光がすこしずつ灯っていく——。</p>
-      <p class="reveal">くわしくは、会期が近づいたら公開します。</p>
-    </div>
-  </section>
-
-  <!-- ⑧ INFORMATION -->
-  <section class="block">
-    <div class="wrap">
-      <span class="eyebrow reveal">information</span>
-      <dl class="info-grid reveal">
-        <div class="info-row">
-          <dt>Date</dt>
-          <dd>2026年10月13日(火)〜10月18日(日)</dd>
+      <div class="three-head">
+        <div>
+          <span class="label reveal">Features<span class="ja">会場でできること</span></span>
+          <h2 class="h2 jp reveal">見る、残す、つながる。</h2>
         </div>
-        <div class="info-row">
-          <dt>Venue</dt>
-          <dd>熊本県立美術館 分館</dd>
+        <p class="jp reveal">作品を見て終わりではなく、自分の「今」を残し、次の表現につながっていく。lumina には、3つの出会い方があります。</p>
+      </div>
+      <div class="pillars">
+        <article class="pillar reveal" style="--c:linear-gradient(90deg,var(--s1),var(--s2))">
+          <span class="no">01</span>
+          <h3>EXHIBITION</h3>
+          <p class="sub">写真・映像作品</p>
+          <p class="jp">9名のクリエイターによる写真・映像作品を展示。それぞれの視点から生まれた「光」を、ゆっくりと見てください。</p>
+          <a href="#exhibitors"><span>出展者を見る</span> →</a>
+        </article>
+        <article class="pillar reveal" style="--c:linear-gradient(90deg,var(--s3),var(--s4))">
+          <span class="no">02</span>
+          <h3>PHOTO MESSAGE</h3>
+          <p class="sub">写真を残す、未来につなぐ</p>
+          <p class="jp">会場でチェキを撮影し、メッセージと一緒に残せます。写真は大切に保管し、1年後の写真展であなたのもとへ。</p>
+          <a href="#photo-message"><span>くわしく見る</span> →</a>
+        </article>
+        <article class="pillar reveal" style="--c:linear-gradient(90deg,var(--s5),var(--s6))">
+          <span class="no">03</span>
+          <h3>YOLO</h3>
+          <p class="sub">つくる人が出会う場所</p>
+          <p class="jp">熊本を中心に、写真・映画・演技・映像などに挑戦する人が集まるクリエイティブコミュニティ。経験や肩書きに関係なく、「やってみたい」から始まる表現の場をつくっています。</p>
+          <a href="https://www.instagram.com/creative.yolo/" target="_blank" rel="noopener"><span>YOLOを知る</span> ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PHOTO MESSAGE ===== -->
+  <section class="sec" id="photo-message">
+    <div class="wrap pm-grid">
+      <div class="pm-body">
+        <span class="label reveal">Photo Message<span class="ja">来場者参加企画</span></span>
+        <h2 class="h2 jp reveal">“今”の気持ちを、<br>未来の自分へ。</h2>
+        <p class="jp reveal">会場でチェキを撮影し、メッセージと一緒に残せます。写真は大切に保管し、1年後の写真展であなたのもとへ。“今”の気持ちを、未来の自分へ届ける参加型企画です。</p>
+        <ol class="pm-steps reveal">
+          <li><b>01</b><span>会場でチェキを撮る</span></li>
+          <li><b>02</b><span>写真にメッセージを添えて、会場に残す</span></li>
+          <li><b>03</b><span>1年後の写真展で、あなたの手元に返ってくる</span></li>
+        </ol>
+        <p class="pm-note jp reveal">※ 写真は郵送ではなく、1年後の写真展の会場でお渡しします。</p>
+      </div>
+      <div class="cheki-stage reveal" aria-hidden="true">
+        <div class="cheki cheki-now"><div class="pic"></div><div class="cap"><b>2026</b><span>今のわたし</span></div></div>
+        <svg class="cheki-arrow" viewBox="0 0 120 40"><path d="M2 30 C 40 2, 80 2, 112 22"/><path d="M104 14 L113 23 L101 26"/></svg>
+        <div class="cheki cheki-future"><div class="pic"></div><div class="cap"><b>2027</b><span>1年後のわたし</span></div></div>
+        <p class="cheki-tag">one year later —</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXHIBITORS ===== -->
+  <section class="sec" id="exhibitors">
+    <div class="wrap">
+      <div class="ex-head">
+        <div>
+          <span class="label reveal">Exhibitors<span class="ja">出展者</span></span>
+          <h2 class="h2 jp reveal">9つの、光。</h2>
         </div>
-        <div class="info-row">
-          <dt>Entry</dt>
-          <dd>入場料 無料</dd>
+        <p class="reveal">順不同・敬称略</p>
+      </div>
+      <ol class="ex-list reveal">
+        <li style="--c:#E58F85"><span class="dot"></span><span class="name">坂本 蓮</span><span class="idx">01</span></li>
+        <li style="--c:#EDA86E"><span class="dot"></span><span class="name">サト（る）</span><span class="idx">02</span></li>
+        <li style="--c:#E6C866"><span class="dot"></span><span class="name">K.DAIZO</span><span class="idx">03</span></li>
+        <li style="--c:#B7CF77"><span class="dot"></span><span class="name">zumi</span><span class="idx">04</span></li>
+        <li style="--c:#8CC79A"><span class="dot"></span><span class="name">かつさん</span><span class="idx">05</span></li>
+        <li style="--c:#7FC2C7"><span class="dot"></span><span class="name">ナカハラ コウイチロウ</span><span class="idx">06</span></li>
+        <li style="--c:#88B3E3"><span class="dot"></span><span class="name">もちながひでお</span><span class="idx">07</span></li>
+        <li style="--c:#A59CE3"><span class="dot"></span><span class="name">淳</span><span class="idx">08</span></li>
+        <li style="--c:#CD9BD8"><span class="dot"></span><span class="name">村田</span><span class="idx">09</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== PAST ===== -->
+  <section class="sec past" id="past">
+    <div class="wrap">
+      <span class="label reveal">Archive<span class="ja">これまでの写真映像展</span></span>
+      <h2 class="h2 jp reveal">この場所から、3回目へ。</h2>
+      <div class="past-grid reveal">
+        <figure class="p1"><img src="assets/photos/hall.jpg" alt="前回の写真映像展の会場。白い壁に作品が並ぶ展示室" loading="lazy" width="1200" height="1600"></figure>
+        <figure class="p2"><img src="assets/photos/viewing.jpg" alt="作品を鑑賞する来場者" loading="lazy" width="1600" height="1069"></figure>
+        <figure class="p3"><img src="assets/photos/group.jpg" alt="会場に集まった出展者たち" loading="lazy" width="1600" height="1069"></figure>
+        <figure class="p4"><img src="assets/photos/shoot.jpg" alt="会場内での撮影の様子" loading="lazy" width="1600" height="1069"></figure>
+      </div>
+      <p class="past-cap reveal">前回の写真映像展「feeling」会場より</p>
+    </div>
+  </section>
+
+  <!-- ===== INFORMATION ===== -->
+  <section class="sec" id="info">
+    <div class="wrap">
+      <span class="label reveal">Information<span class="ja">開催情報</span></span>
+      <div class="info-grid">
+        <div>
+          <p class="info-title jp reveal">第3回 写真映像展<br>「lumina — 光 —」</p>
+          <dl class="info-dl reveal">
+            <div><dt>会期</dt><dd><span class="big">2026.10.14 – 10.18</span><small>10月14日（水）〜 10月18日（日）</small></dd></div>
+            <div><dt>時間</dt><dd>9:30 – 17:15<small>※ 最終日 10月18日（日）は 16:00 まで</small></dd></div>
+            <div><dt>会場</dt><dd>熊本県立美術館 分館 2F 展示室2<small>〒860-0001 熊本市中央区千葉城町2-18</small></dd></div>
+            <div><dt>入場料</dt><dd>無料</dd></div>
+          </dl>
         </div>
-        <div class="info-row">
-          <dt>Host</dt>
-          <dd>Creative YOLO<small>夢を追うすべての"今"をカタチに。</small></dd>
+        <div class="info-side access reveal">
+          <h3>Access</h3>
+          <ul>
+            <li><b>熊本市電・バス</b>「熊本城・市役所前」下車 徒歩約5分</li>
+            <li><b>熊本城周遊バス しろめぐりん</b>「県立美術館分館横」下車すぐ</li>
+            <li><b>お車の方</b>　専用駐車場はありません。二の丸駐車場・三の丸駐車場（有料）ほか、周辺の有料駐車場をご利用ください。</li>
+          </ul>
+          <div class="btns">
+            <a class="btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%86%8A%E6%9C%AC%E7%9C%8C%E7%AB%8B%E7%BE%8E%E8%A1%93%E9%A4%A8%E5%88%86%E9%A4%A8" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 15s5-4.6 5-8.5A5 5 0 0 0 3 6.5C3 10.4 8 15 8 15z"/><circle cx="8" cy="6.5" r="1.8"/></svg>
+              地図で見る
+            </a>
+            <a class="btn ghost" id="calLink" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%E5%86%99%E7%9C%9F%E6%98%A0%E5%83%8F%E5%B1%95%E3%80%8Clumina%20%E2%80%94%20%E5%85%89%20%E2%80%94%E3%80%8D&amp;dates=20261014/20261019&amp;location=%E7%86%8A%E6%9C%AC%E7%9C%8C%E7%AB%8B%E7%BE%8E%E8%A1%93%E9%A4%A8%20%E5%88%86%E9%A4%A8%202F%20%E5%B1%95%E7%A4%BA%E5%AE%A42%EF%BC%88%E7%86%8A%E6%9C%AC%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%83%E8%91%89%E5%9F%8E%E7%94%BA2-18%EF%BC%89&amp;details=9%3A30%E3%80%9C17%3A15%EF%BC%88%E6%9C%80%E7%B5%82%E6%97%A5%E3%81%AF16%3A00%E3%81%BE%E3%81%A7%EF%BC%89%20%2F%20%E5%85%A5%E5%A0%B4%E7%84%A1%E6%96%99%0Ahttps%3A%2F%2Flumina-site-ecru.vercel.app%2F&amp;ctz=Asia%2FTokyo" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>
+              カレンダーに追加
+            </a>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 主催・協賛 ===== -->
+  <section class="credit" aria-label="主催・協賛">
+    <div class="wrap">
+      <dl class="credit-row reveal">
+        <div><dt>主催</dt><dd>YOLO</dd></div>
+        <div><dt>協賛</dt><dd>PHOTOPRI</dd></div>
       </dl>
     </div>
   </section>
 
-  <!-- ⑨ LUMINA CHARACTER -->
-  <section class="block lumina-chara">
+  <!-- ===== FOLLOW ===== -->
+  <section class="follow sec" id="follow">
     <div class="wrap">
-      <span class="eyebrow reveal">lumina</span>
-      <h2 class="reveal">小さな案内人。</h2>
-      <p class="lumina-caption reveal">ルミナは、写真に宿る"光"を集める小さな案内人。<br>人の心が動いた瞬間に生まれる光を見つけながら、<br>会場のどこかをふわふわと漂っています。</p>
-    </div>
-    <img src="assets/lumina.png" alt="ルミナ" class="lumina-img reveal">
-  </section>
-
-  <!-- ⑩ SNS -->
-  <section class="block sns">
-    <div class="wrap">
-      <span class="eyebrow reveal">stay in touch</span>
-      <h2 class="reveal">最新情報は Instagram で。</h2>
-      <!-- ↓ アカウントのURLは正しいものに差し替えてください -->
-      <a class="cta reveal" href="https://www.instagram.com/creative.yolo/" target="_blank" rel="noopener">@creative.yolo をフォロー →</a>
-      <p class="tags reveal">#lumina2026 &nbsp; #yolo写真映像展lumina &nbsp; #クリエイティブYOLO</p>
+      <span class="label reveal">Follow</span>
+      <h2 class="h2 jp reveal">最新情報は Instagram で。</h2>
+      <p class="jp reveal">出展作品の紹介や会期中の様子をお届けします。</p>
+      <div class="btns reveal">
+        <a class="btn solid" href="https://www.instagram.com/creative.yolo/" target="_blank" rel="noopener">@creative.yolo をフォロー ↗</a>
+      </div>
+      <p class="tags reveal"><span>#lumina2026</span> <span>#yolo写真映像展lumina</span> <span>#クリエイティブYOLO</span></p>
     </div>
   </section>
-
 
 </main>
 
+<div class="spectrum-rule" aria-hidden="true"></div>
 <footer>
-  <div class="foot-mark">YOLO</div>
-  <div class="foot-sub">CREATIVE YOLO ／ KUMAMOTO</div>
+  <div class="wrap">
+    <div class="foot-mark">lumina<small>光</small></div>
+    <div class="foot-sub">© YOLO ／ KUMAMOTO</div>
+  </div>
 </footer>
 
 <script>
 (function(){
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ===== スクロールで各要素をふわっと表示 ===== */
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach((e)=>{
-      if(e.isIntersecting){
-        const el=e.target;
-        setTimeout(()=>el.classList.add('in'), reduce?0:(parseInt(el.dataset.d||0)));
-        io.unobserve(el);
-      }
-    });
-  },{threshold:.18});
-  document.querySelectorAll('.reveal').forEach((el,i)=>{
-    el.dataset.d = (i%4)*90;
-    io.observe(el);
-  });
-
-  /* ===== 全セクション：浮かぶ光の点を注入 ===== */
-  const cols=['#F5A623','#FF7A9C','#6FD6E8','#B48CFF','#FFD16B'];
-  document.querySelectorAll('main .block').forEach(sec=>{
-    if(sec.querySelector('.glow-field')) return; // 既存のものはスキップ
-    const gf=document.createElement('div');
-    gf.className='glow-field';
-    gf.setAttribute('aria-hidden','true');
-    for(let i=0;i<64;i++){
-      const m=document.createElement('span');m.className='gm';
-      const sz=2+Math.random()*7, c=cols[i%cols.length];
-      m.style.width=sz+'px';m.style.height=sz+'px';
-      m.style.left=(Math.random()*100)+'%';
-      m.style.top=(Math.random()*100)+'%';
-      m.style.setProperty('--c',c);
-      m.style.setProperty('--t',(3+Math.random()*4).toFixed(2)+'s');
-      m.style.boxShadow='0 0 '+(sz*1.8).toFixed(0)+'px '+c;
-      m.style.animationDelay=(Math.random()*4).toFixed(2)+'s';
-      gf.appendChild(m);
-    }
-    sec.insertBefore(gf, sec.firstChild);
-  });
-
-  /* ===== 全体：スクロールで昇っていく光のにじみ ===== */
-  const scene=document.getElementById('scene');
-  function paintGlow(){
-    const max=document.documentElement.scrollHeight-window.innerHeight;
-    const prog=max>0?Math.min(1,Math.max(0,window.scrollY/max)):0;
-    const y=(86-prog*66).toFixed(1);
-    const warm=(0.08+prog*0.09).toFixed(3);
-    scene.style.background=
-      'radial-gradient(90% 62% at 50% '+y+'%, rgba(255,205,120,'+warm+') 0%, rgba(160,120,255,0.07) 44%, transparent 78%)';
-  }
-  if(scene && !reduce){
-    paintGlow();
-    let ticking=false;
-    window.addEventListener('scroll',()=>{
-      if(!ticking){requestAnimationFrame(()=>{paintGlow();ticking=false;});ticking=true;}
-    },{passive:true});
-    window.addEventListener('resize',paintGlow,{passive:true});
-  }
-
-  /* ===== 全画面の光：インタラクティブCanvasシステム ===== */
-  const canvas=document.getElementById('field');
-  const ctx=canvas.getContext('2d');
-  let W,H,DPR,cx,cy,particles=[],start=performance.now();
-  let focus={x:0,y:0}, target={x:0,y:0};
-
-  // マウス/タッチ追従
-  let mouse={x:0,y:0}, lastMouseMove=Date.now();
-  if(!reduce){
-    window.addEventListener('mousemove',e=>{
-      mouse.x=e.clientX; mouse.y=e.clientY; lastMouseMove=Date.now();
-    },{passive:true});
-    window.addEventListener('touchmove',e=>{
-      mouse.x=e.touches[0].clientX; mouse.y=e.touches[0].clientY;
-      lastMouseMove=Date.now();
-    },{passive:true});
-  }
-
-  // スクロール速度
-  let scrollVel=0, lastScrollY=window.scrollY;
-  if(!reduce){
-    window.addEventListener('scroll',()=>{
-      scrollVel=Math.min(4,Math.abs(window.scrollY-lastScrollY)*0.1);
-      lastScrollY=window.scrollY;
-    },{passive:true});
-  }
-
-  // クリック/タップ爆発
-  let flashT=-999999;
-  if(!reduce){
-    canvas.addEventListener('pointerdown',e=>{
-      const bx=e.clientX, by=e.clientY;
-      particles.forEach(p=>{
-        const dx=(focus.x+p.chx)-bx;
-        const dy=(focus.y+p.chy)-by;
-        const d=Math.hypot(dx,dy)||1;
-        const force=Math.max(0,1-d/320)*55;
-        p.burstX=(dx/d)*force; p.burstY=(dy/d)*force;
-        p.burstT=performance.now();
+  /* スクロールでふわっと表示 */
+  var els = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('in')});
+  }else{
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          var el=e.target;
+          setTimeout(function(){el.classList.add('in')}, parseInt(el.dataset.d||0,10));
+          io.unobserve(el);
+        }
       });
-      flashT=performance.now();
+    },{threshold:.15, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el,i){ el.dataset.d = (i%3)*110; io.observe(el); });
+  }
+
+  /* ヒーロー通過後に上部バーを表示 */
+  var bar=document.getElementById('bar'), hero=document.getElementById('top');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){
+      bar.classList.toggle('show', !en[0].isIntersecting);
+    },{threshold:.08}).observe(hero);
+  }
+
+  /* 光の扇：スクロールでゆっくり広がる */
+  var fan=document.getElementById('fanScale');
+  if(fan && !reduce){
+    var tick=false;
+    window.addEventListener('scroll',function(){
+      if(tick) return; tick=true;
+      requestAnimationFrame(function(){
+        var p=Math.min(1, window.scrollY/window.innerHeight);
+        fan.setAttribute('transform','translate(800 296) scale(1 '+(1+p*.35).toFixed(3)+') translate(-800 -296)');
+        tick=false;
+      });
     },{passive:true});
   }
-
-  // セクション切替フラッシュ
-  let flashB=0;
-
-  // セクション別カラーウェイト [amber,rose,cyan,violet,gold]
-  const CFG=[
-    {a:[0.50,0.45],m:'gather', s:0.95,b:0.85,c:0.38, cw:[1.0,0.6,0.5,0.7,1.2]},
-    {a:[0.33,0.50],m:'scatter',s:0.80,b:0.70,c:0.14, cw:[0.3,0.5,1.4,0.8,0.4]},
-    {a:[0.50,0.47],m:'band',   s:0.75,b:0.68,c:0.12, cw:[0.5,0.4,0.6,1.4,0.5]},
-    {a:[0.50,0.50],m:'grid',   s:0.80,b:0.78,c:0.10, cw:[0.6,1.0,0.7,0.8,0.6]},
-    {a:[0.62,0.50],m:'gather', s:0.88,b:0.82,c:0.26, cw:[1.4,0.5,0.4,0.5,1.0]},
-    {a:[0.50,0.50],m:'gather', s:1.05,b:1.00,c:0.46, cw:[1.2,1.0,0.8,1.2,1.4]},
-    {a:[0.50,0.48],m:'ring',   s:0.85,b:0.82,c:0.18, cw:[0.5,0.9,0.7,1.6,0.5]},
-    {a:[0.37,0.52],m:'recede', s:0.55,b:0.46,c:0.07, cw:[0.5,0.4,0.5,0.5,0.6]},
-    {a:[0.50,0.46],m:'scatter',s:0.85,b:0.78,c:0.16, cw:[0.8,1.2,1.0,0.6,0.8]}
-  ];
-
-  const BASE_COLORS=[[245,166,35],[255,122,156],[111,214,232],[180,140,255],[255,209,107]];
-  let curCW=[1,1,1,1,1], tCW=[1,1,1,1,1];
-
-  function formation(m,p,S,i,n){
-    switch(m){
-      case 'scatter':{const r=(0.30+p.u*0.70)*S*0.46;return [Math.cos(p.a)*r,Math.sin(p.a)*r*0.78];}
-      case 'ring':{const r=S*0.24*(0.9+0.12*p.u);return [Math.cos(p.a)*r,Math.sin(p.a)*r];}
-      case 'band':{return [(p.u-0.5)*S*1.25,Math.sin(p.a)*S*0.05];}
-      case 'grid':{
-        const gc=Math.max(1,Math.round(Math.sqrt(n)));
-        const gr=Math.ceil(n/gc);
-        const gx=i%gc, gy=Math.floor(i/gc);
-        return [(gx-(gc-1)/2)*(S*0.66/gc),(gy-(gr-1)/2)*(S*0.40/gr)];
-      }
-      case 'recede':{const r=p.u*S*0.085;return [Math.cos(p.a)*r,Math.sin(p.a)*r];}
-      default:{const r=p.u*S*0.13;return [Math.cos(p.a)*r,Math.sin(p.a)*r];}
-    }
-  }
-
-  function resize(){
-    DPR=Math.min(window.devicePixelRatio||1,2);
-    W=canvas.clientWidth; H=canvas.clientHeight;
-    canvas.width=W*DPR; canvas.height=H*DPR;
-    ctx.setTransform(DPR,0,0,DPR,0,0);
-    cx=W/2; cy=H/2;
-    mouse.x=cx; mouse.y=cy;
-    if(!focus.x){focus.x=cx; focus.y=cy;}
-    if(!target.x){target.x=cx; target.y=cy;}
-  }
-
-  function makeParticles(){
-    particles=[];
-    const n=W<520?52:90;
-    for(let i=0;i<n;i++){
-      const ang=Math.random()*Math.PI*2;
-      const rad=Math.min(W,H)*(0.5+Math.random()*0.65);
-      particles.push({
-        ox:cx+Math.cos(ang)*rad, oy:cy+Math.sin(ang)*rad,
-        a:Math.random()*Math.PI*2, u:Math.random(),
-        ph:Math.random()*Math.PI*2, sp:0.3+Math.random()*0.5,
-        drift:6+Math.random()*8,
-        baseR:1.0+Math.random()*2.0,
-        ci:i%BASE_COLORS.length,
-        delay:Math.random()*0.5,
-        chx:0,chy:0, thx:0,thy:0,
-        burstX:0,burstY:0,burstT:-999999
-      });
-    }
-  }
-
-  const ease=t=>1-Math.pow(1-t,3);
-
-  let curIdx=-1;
-  const cur={s:0.95,b:0.85,c:0.38}, tcur={s:0.95,b:0.85,c:0.38};
-
-  function setSection(idx){
-    if(idx===curIdx) return;
-    curIdx=idx;
-    flashB=0.55;
-    const cfg=CFG[idx%CFG.length];
-    target.x=cfg.a[0]*W; target.y=cfg.a[1]*H;
-    tcur.s=cfg.s; tcur.b=cfg.b; tcur.c=cfg.c;
-    tCW=cfg.cw.slice();
-    const S=Math.min(W,H), n=particles.length;
-    particles.forEach((p,i)=>{const o=formation(cfg.m,p,S,i,n);p.thx=o[0];p.thy=o[1];});
-  }
-
-  const sections=[...document.querySelectorAll('header.hero, main .block')];
-  function pickAnchor(){
-    const midY=window.innerHeight*0.5;
-    let idx=0;
-    for(let i=0;i<sections.length;i++){
-      const r=sections[i].getBoundingClientRect();
-      if(r.top<=midY && r.bottom>midY){idx=i;break;}
-    }
-    setSection(idx);
-  }
-  window.addEventListener('scroll',pickAnchor,{passive:true});
-
-  function draw(now){
-    const t=(now-start)/1000;
-    ctx.clearRect(0,0,W,H);
-
-    // スクロール速度の減衰
-    scrollVel*=0.88;
-
-    // カーソル追従：セクションアンカーにマウスオフセットをブレンド
-    const blendX=target.x+(mouse.x-target.x)*0.18;
-    const blendY=target.y+(mouse.y-target.y)*0.12;
-    focus.x+=(blendX-focus.x)*0.06;
-    focus.y+=(blendY-focus.y)*0.06;
-
-    // パラメータ補間
-    cur.s+=(tcur.s-cur.s)*0.06;
-    cur.b+=(tcur.b-cur.b)*0.06;
-    cur.c+=(tcur.c-cur.c)*0.06;
-    for(let i=0;i<5;i++) curCW[i]+=(tCW[i]-curCW[i])*0.04;
-    flashB*=0.82;
-
-    // アイドル呼吸（5秒静止でゆらぎ）
-    const idleSec=(Date.now()-lastMouseMove)/1000;
-    const breathe=idleSec>5?1+0.30*Math.sin(t*0.4):1;
-
-    const conv=Math.min(1,Math.max(0,(t-0.5)/2.8));
-    const coreA=ease(conv);
-    const effectiveB=cur.b+flashB;
-
-    // 中心光
-    const ca=cur.c*coreA;
-    if(ca>0.004){
-      const cr=110;
-      const g=ctx.createRadialGradient(focus.x,focus.y,0,focus.x,focus.y,cr);
-      g.addColorStop(0,`rgba(255,232,178,${ca})`);
-      g.addColorStop(.45,`rgba(255,209,107,${ca*0.5})`);
-      g.addColorStop(1,'rgba(255,209,107,0)');
-      ctx.fillStyle=g;ctx.beginPath();ctx.arc(focus.x,focus.y,cr,0,Math.PI*2);ctx.fill();
-    }
-
-    // クリックフラッシュ（中心の白いグロー）
-    const flashAge=(now-flashT)/400;
-    if(flashAge<1){
-      const fa=(1-ease(flashAge))*0.75;
-      const fg=ctx.createRadialGradient(focus.x,focus.y,0,focus.x,focus.y,180);
-      fg.addColorStop(0,`rgba(255,248,230,${fa})`);
-      fg.addColorStop(.3,`rgba(255,220,130,${fa*0.5})`);
-      fg.addColorStop(1,'rgba(255,180,80,0)');
-      ctx.fillStyle=fg;ctx.beginPath();ctx.arc(focus.x,focus.y,180,0,Math.PI*2);ctx.fill();
-    }
-
-    ctx.globalCompositeOperation='lighter';
-    particles.forEach(p=>{
-      p.chx+=(p.thx-p.chx)*0.05;
-      p.chy+=(p.thy-p.chy)*0.05;
-      const pr=ease(Math.min(1,Math.max(0,(conv-p.delay)/((1-p.delay)||1))));
-
-      // カーソル引力（280px以内で効く）
-      const mdx=mouse.x-(focus.x+p.chx);
-      const mdy=mouse.y-(focus.y+p.chy);
-      const mdist=Math.hypot(mdx,mdy);
-      const pull=Math.max(0,1-mdist/280)*0.18*pr;
-
-      const homeX=focus.x+p.chx+mdx*pull;
-      const homeY=focus.y+p.chy+mdy*pull;
-      const bx=p.ox+(homeX-p.ox)*pr;
-      const by=p.oy+(homeY-p.oy)*pr;
-
-      // スクロール速度 + アイドル呼吸で揺れ幅変化
-      const dynDrift=p.drift*(1+scrollVel*1.4)*breathe;
-      const baseX=bx+Math.cos(t*p.sp+p.ph)*dynDrift*pr;
-      const baseY=by+Math.sin(t*p.sp*0.9+p.ph)*dynDrift*pr;
-
-      // 爆発オフセット（300msで収束）
-      const burstAge=(now-p.burstT)/300;
-      const burstE=burstAge<1?ease(1-burstAge):0;
-      const x=baseX+p.burstX*burstE;
-      const y=baseY+p.burstY*burstE;
-
-      const tw=0.55+0.45*Math.sin(t*1.5+p.ph);
-      const r=p.baseR*cur.s*(1+tw*0.3);
-
-      // セクション別カラーウェイト適用
-      const w=curCW[p.ci];
-      const [R,G,B]=BASE_COLORS[p.ci];
-      const alpha=Math.min(1, 0.9*tw*effectiveB*w);
-      const grd=ctx.createRadialGradient(x,y,0,x,y,r*6);
-      grd.addColorStop(0,`rgba(${R},${G},${B},${alpha})`);
-      grd.addColorStop(1,`rgba(${R},${G},${B},0)`);
-      ctx.fillStyle=grd;ctx.beginPath();ctx.arc(x,y,r*6,0,Math.PI*2);ctx.fill();
-    });
-    ctx.globalCompositeOperation='source-over';
-    requestAnimationFrame(draw);
-  }
-
-  function init(){
-    resize(); makeParticles(); pickAnchor();
-    particles.forEach(p=>{p.chx=p.thx;p.chy=p.thy;});
-    cur.s=tcur.s; cur.b=tcur.b; cur.c=tcur.c;
-    curCW=tCW.slice();
-    if(reduce){
-      start=performance.now()-9000;
-      draw(performance.now());
-    }else{
-      start=performance.now();
-      requestAnimationFrame(draw);
-    }
-  }
-  window.addEventListener('resize',()=>{resize();makeParticles();curIdx=-1;pickAnchor();particles.forEach(p=>{p.chx=p.thx;p.chy=p.thy;});});
-  init();
 })();
 </script>
 </body>

@@ -52,14 +52,7 @@ Vercel のプロジェクト → **Settings → Domains** から、`lumina.◯�
 
 ---
 
-## 公開前にやること（中身の差し替え）
+## 現在の運用
 
-`index.html` 内、コメントで該当箇所を示しています。
-
-- [ ] Instagram の正式アカウントURL（`https://www.instagram.com/` の箇所）
-- [ ] OGP画像（`og:image`／1200×630）— SNSシェア時のサムネ
-- [ ] 会期の確定日程・入場料・会場アクセス
-- [ ] `<title>` と説明文は確定後に微調整
-
-> ※このサイトは現状 v1（暗ベース）です。設計書の改訂（JOIN追加・人数表記の変更など）はまだ未反映。
-> サイト本体に反映するタイミングを決めたら、続けて実装します。
+GitHub `hasu-bot/lumina-site` の `main` に push すると Vercel に自動デプロイされます。
+内容の正は `docs/lumina_design_spec.md`（v2）です。
