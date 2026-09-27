@@ -285,6 +285,10 @@ a{color:inherit}
 .ex-list li:hover::after{opacity:1;transform:translateY(-50%) scale(1)}
 .ex-list li:hover .dot{box-shadow:0 0 0 9px color-mix(in srgb,var(--c) 28%,transparent)}
 .ex-list .name{font-family:var(--serif-ja);font-weight:500;font-size:1.28rem;letter-spacing:.12em;line-height:1.5}
+.ex-link{display:flex;align-items:center;gap:20px;text-decoration:none;min-width:0;position:relative;z-index:1}
+.ex-list .who{display:flex;flex-direction:column;min-width:0}
+.ex-list .ig{font-family:var(--serif-en);font-size:.88rem;letter-spacing:.06em;color:var(--ink-3);line-height:1.4;transition:color .3s}
+.ex-link:hover .ig,.ex-link:focus-visible .ig{color:var(--ink)}
 .ex-list .idx{margin-left:auto;font-family:var(--serif-en);font-style:italic;font-size:.9rem;color:var(--ink-3)}
 
 /* ===== PAST ===== */
@@ -557,15 +561,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
         <p class="reveal">順不同・敬称略</p>
       </div>
       <ol class="ex-list reveal">
-        <li style="--c:#E58F85"><span class="dot"></span><span class="name">坂本 蓮</span><span class="idx">01</span></li>
-        <li style="--c:#EDA86E"><span class="dot"></span><span class="name">サト（る）</span><span class="idx">02</span></li>
-        <li style="--c:#E6C866"><span class="dot"></span><span class="name">K.DAIZO</span><span class="idx">03</span></li>
-        <li style="--c:#B7CF77"><span class="dot"></span><span class="name">zumi</span><span class="idx">04</span></li>
-        <li style="--c:#8CC79A"><span class="dot"></span><span class="name">かつさん</span><span class="idx">05</span></li>
-        <li style="--c:#7FC2C7"><span class="dot"></span><span class="name">ナカハラ コウイチロウ</span><span class="idx">06</span></li>
-        <li style="--c:#88B3E3"><span class="dot"></span><span class="name">もちながひでお</span><span class="idx">07</span></li>
-        <li style="--c:#A59CE3"><span class="dot"></span><span class="name">淳</span><span class="idx">08</span></li>
-        <li style="--c:#CD9BD8"><span class="dot"></span><span class="name">村田</span><span class="idx">09</span></li>
+        <li style="--c:#E58F85"><a class="ex-link" href="https://www.instagram.com/hasu_portrait/" target="_blank" rel="noopener"><span class="dot"></span><span class="who"><span class="name">坂本 蓮</span><span class="ig">@hasu_portrait</span></span></a><span class="idx">01</span></li>
+        <li style="--c:#EDA86E"><a class="ex-link" href="https://www.instagram.com/sato_ru2017/" target="_blank" rel="noopener"><span class="dot"></span><span class="who"><span class="name">サト（る）</span><span class="ig">@sato_ru2017</span></span></a><span class="idx">02</span></li>
+        <li style="--c:#E6C866"><a class="ex-link" href="https://www.instagram.com/goro_goro0604/" target="_blank" rel="noopener"><span class="dot"></span><span class="who"><span class="name">K.DAIZO</span><span class="ig">@goro_goro0604</span></span></a><span class="idx">03</span></li>
+        <li style="--c:#B7CF77"><a class="ex-link" href="https://www.instagram.com/zumi_portrait/" target="_blank" rel="noopener"><span class="dot"></span><span class="who"><span class="name">zumi</span><span class="ig">@zumi_portrait</span></span></a><span class="idx">04</span></li>
+        <li style="--c:#8CC79A"><a class="ex-link" href="https://www.instagram.com/katusan_d5000/" target="_blank" rel="noopener"><span class="dot"></span><span class="who"><span class="name">かつさん</span><span class="ig">@katusan_d5000</span></span></a><span class="idx">05</span></li>
+        <li style="--c:#7FC2C7"><a class="ex-link" href="https://www.instagram.com/real.photo.life/" target="_blank" rel="noopener"><span class="dot"></span><span class="who"><span class="name">ナカハラ コウイチロウ</span><span class="ig">@real.photo.life</span></span></a><span class="idx">06</span></li>
+        <li style="--c:#88B3E3"><a class="ex-link" href="https://www.instagram.com/moc_h_/" target="_blank" rel="noopener"><span class="dot"></span><span class="who"><span class="name">もちながひでお</span><span class="ig">@moc_h_</span></span></a><span class="idx">07</span></li>
+        <li style="--c:#A59CE3"><a class="ex-link" href="https://www.instagram.com/batayan_photo/" target="_blank" rel="noopener"><span class="dot"></span><span class="who"><span class="name">淳</span><span class="ig">@batayan_photo</span></span></a><span class="idx">08</span></li>
+        <li style="--c:#CD9BD8"><a class="ex-link" href="https://www.instagram.com/mu9827dti/" target="_blank" rel="noopener"><span class="dot"></span><span class="who"><span class="name">村田</span><span class="ig">@mu9827dti</span></span></a><span class="idx">09</span></li>
       </ol>
     </div>
   </section>
